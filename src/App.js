@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Views/Home';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import Video from './Views/Video';
 
 
 function App() {
@@ -14,9 +15,6 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/videos" element={<Video />} />
-
-
-            
 
             {/* <Route>
                         <Page404 />
