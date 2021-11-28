@@ -13,18 +13,16 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            {/* <Route exact path="/home">
-                        <Home />
-                    </Route> */}
-            {/* <Route path="/articles">
-                        <Articles />
-                    </Route> */}
+            <Route path="/videos" element={<Video />} />
+
+
+            
 
             {/* <Route>
                         <Page404 />
                     </Route> */}
+
           </Routes>
-          {/* <Footer /> */}
         <Footer />
       </Router>
     </div>
