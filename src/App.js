@@ -4,6 +4,7 @@ import Home from './Views/Home';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Video from './Views/Video';
+import Page404 from './Views/Page404';
 
 
 function App() {
