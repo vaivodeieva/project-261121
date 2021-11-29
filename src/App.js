@@ -15,11 +15,7 @@ function App() {
             <Route path="/" element={<Home />} />
 
             <Route path="/videos" element={<Video />} />
-
-            {/* <Route>
-                        <Page404 />
-                    </Route> */}
-
+            <Route path="*" element={<Page404 /> } />
           </Routes>
         <Footer />
       </Router>
