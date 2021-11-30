@@ -14,7 +14,6 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-
             <Route path="/videos" element={<Video />} />
             <Route path="*" element={<Page404 /> } />
           </Routes>
