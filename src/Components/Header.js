@@ -15,7 +15,7 @@ function Header() {
 
     return (
 
-        <div>
+        <div className="container-header">
             <header>
                 <nav id="main-navbar" className="navbar navbar-default navbar-fixed-top">
                     <div className="container navbar-container">
