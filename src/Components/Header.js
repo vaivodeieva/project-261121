@@ -48,11 +48,8 @@ function Header() {
                     </div>
                 </nav>
             </header>
-
-            {/* <section className="full-width-img">
-
-</section> */}
-
+            <section className="full-width-img">
+            </section>
         </div >
     )
 }
