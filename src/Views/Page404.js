@@ -2,7 +2,6 @@ import '../Assets/Css/Page404.css';
 function Page404() {
     return (
         <div>
-            <div className="container404">
             <div className="error"> <span>Page not found</span><span>404</span><span>Swim Home, Friend</span>
             </div>
             <div className="sun"></div>
@@ -38,7 +37,6 @@ function Page404() {
                 <div className="grass_tw"></div>
                 <div className="grass_tw"></div>
                 <div className="grass_tw"></div>
-            </div>
             </div>
         </div>
     )
