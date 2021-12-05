@@ -1,4 +1,4 @@
-function Video() {
+function Works() {
 
     return (
 
@@ -8,4 +8,4 @@ function Video() {
     )
 } 
 
-export default Video;
+export default Works;
