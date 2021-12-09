@@ -4,29 +4,29 @@ function Page404() {
     return (
         <div>
 
-            <div class="page-wrapper">
-                <div class="circles-layer">
-                    <div class="circle -white"></div>
-                    <div class="circle -red"></div>
-                    <div class="circle -white"></div>
-                    <div class="circle -red"></div>
+            <div className="page-wrapper">
+                <div className="circles-layer">
+                    <div className="circle -white"></div>
+                    <div className="circle -red"></div>
+                    <div className="circle -white"></div>
+                    <div className="circle -red"></div>
                 </div>
-                <div class="numbers-layer">
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number">4</div>
-                    <div class="number -with-shadow">0</div>
-                    <div class="number -with-shadow">0</div>
-                    <div class="number -with-shadow">0</div>
-                    <div class="number -with-shadow">0</div>
+                <div className="numbers-layer">
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number">4</div>
+                    <div className="number -with-shadow">0</div>
+                    <div className="number -with-shadow">0</div>
+                    <div className="number -with-shadow">0</div>
+                    <div className="number -with-shadow">0</div>
                 </div>
-                <div class="oops-message">
-                    <div class="test">Opps... looks like You got lost</div><a class="button" href="">Try again</a>
+                <div className="oops-message">
+                    <div className="test">Opps... looks like You got lost</div><a className="button" href="">Try again</a>
                 </div>
             </div>
 
