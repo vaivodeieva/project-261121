@@ -75,7 +75,7 @@ body:after {
   cursor: pointer;
 }
 .nav__item:hover {
-  color: #00bdea;
+  color: lightseagreen;
 }
 .nav__item-text {
   display: block;
