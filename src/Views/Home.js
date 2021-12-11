@@ -2,7 +2,7 @@ function Home() {
 
     return (
 
-        <div>
+        <div className="home-container">
             <div className="container">
                 <div className="titular">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1502&q=80" alt="Students gathered around a table, laughing" className="bg" />

@@ -5,7 +5,7 @@ function Header() {
 
     return (
 
-        <div>
+        <div className='header-container'>
             <nav className="nav">
                 <input type="checkbox" className="nav__cb" id="menu-cb" />
                 <div className="nav__content">
