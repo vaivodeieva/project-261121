@@ -1,7 +1,8 @@
-* {
+.page-wrapper {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: var(--red);
 }
 
 :root {
@@ -13,9 +14,6 @@
     font-size: calc( 14px + (25 - 14) * ((100vw - 400px) / ( 1200 - 400)));
 }
 
-body {
-    background: var(--red);
-}
 
 .page-wrapper {
     position: relative;
