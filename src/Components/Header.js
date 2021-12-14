@@ -4,42 +4,42 @@ function Header() {
     return (
 
         <div>
-            <div class="containers">
+            <div className="containers">
 
-                <ul class="list">
+                <ul className="list">
 
-                    <li class="item-list">
-                        <a class="item-link l6" href="#">
-                            <div class="item-icon-6"><i class="fas fa-home icon"></i></div>
-                            <p class="item-text-6">Home</p>
+                    <li className="item-list">
+                        <a className="item-link l6" href="#">
+                            <div className="item-icon-6"><i className="fas fa-home icon"></i></div>
+                            <p className="item-text-6">Home</p>
                         </a>
                     </li>
 
-                    <li class="item-list">
-                        <a class="item-link l6" href="#">
-                            <div class="item-icon-6"><i class="fas fa-search icon"></i></div>
-                            <p class="item-text-6">Search</p>
+                    <li className="item-list">
+                        <a className="item-link l6" href="#">
+                            <div className="item-icon-6"><i className="fas fa-search icon"></i></div>
+                            <p className="item-text-6">Search</p>
                         </a>
                     </li>
 
-                    <li class="item-list">
-                        <a class="item-link l6" href="#">
-                            <div class="item-icon-6"><i class="fas fa-fire icon"></i></div>
-                            <p class="item-text-6">Workout</p>
+                    <li className="item-list">
+                        <a className="item-link l6" href="#">
+                            <div className="item-icon-6"><i className="fas fa-fire icon"></i></div>
+                            <p className="item-text-6">Workout</p>
                         </a>
                     </li>
 
-                    <li class="item-list">
-                        <a class="item-link l6" href="#">
-                            <div class="item-icon-6"><i class="fas fa-bell icon"></i></div>
-                            <p class="item-text-6">Notification</p>
+                    <li className="item-list">
+                        <a className="item-link l6" href="#">
+                            <div className="item-icon-6"><i className="fas fa-bell icon"></i></div>
+                            <p className="item-text-6">Notification</p>
                         </a>
                     </li>
 
-                    <li class="item-list">
-                        <a class="item-link l6" href="#">
-                            <div class="item-icon-6"><i class="fas fa-cog icon"></i></div>
-                            <p class="item-text-6">Settings</p>
+                    <li className="item-list">
+                        <a className="item-link l6" href="#">
+                            <div className="item-icon-6"><i className="fas fa-cog icon"></i></div>
+                            <p className="item-text-6">Settings</p>
                         </a>
                     </li>
                     </ul>
