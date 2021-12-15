@@ -2,7 +2,7 @@ import '../Assets/Css/Header.css';
 function Header() {
     return (
         <div>
-            <div className="containers">
+            <div className="containers header-container">
                 <ul className="list">
                     <li className="item-list">
                         <a className="item-link l6" href="#">

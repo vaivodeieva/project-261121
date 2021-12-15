@@ -1,16 +1,12 @@
-* {
-    margin: 0px;
-    padding: 0px;
-  
+.header-container {
     box-sizing: border-box;
-  
     list-style: none;
     text-decoration: none;
     font: 600 12px sans-serif;
   }
   
   body{
-    background-color: #ccc;
+    background-color: lightseagreen;
   }
   
   .containers,
