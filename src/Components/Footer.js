@@ -1,7 +1,5 @@
 import '../Assets/Css/Footer.css';
-
 function Footer() {
-
     return (
         <div>
             <footer className="footer-section">
@@ -117,10 +115,8 @@ function Footer() {
                     </div>
                 </div>
             </footer>
-
         </div>
     )
 }
-
 export default Footer;
 
