@@ -166,7 +166,6 @@
     top: -25px;
     width: 40px;
     height: 40px;
-    
     border-radius: 50%;
     background-color: purple;
     color: #fff;
@@ -196,5 +195,9 @@
     left: 50%;
     transform: translatex(-50%);
     color: purple;
+  }
+
+  a:hover {
+    text-decoration: none;
   }
   
