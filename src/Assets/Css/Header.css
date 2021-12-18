@@ -68,7 +68,7 @@
   
   .item-list:hover .item-icon-1,
   .item-list:hover .item-icon-1 .icon {
-    color: purple;
+    color: rgb(245, 12, 132);
     font-size: 24px;
   }
   
@@ -87,7 +87,7 @@
     height: 40px;
   
     border-radius: 5px;
-    background-color: purple;
+    background-color: rgb(245, 12, 132);
   }
   
   .item-list:hover .item-icon-2 .icon {
@@ -108,7 +108,7 @@
   .item-list:hover .item-icon-3 {
     left: 0;
     transform: translatex(0%);
-    color: purple;
+    color: rgb(245, 12, 132);
   }
   
   .item-text-3 {
@@ -118,7 +118,7 @@
   }
   
   .item-list:hover .item-text-3 {
-    color: purple;
+    color: rgb(245, 12, 132);
     transform: translatex(5px);
   }
   
@@ -130,7 +130,7 @@
   }
   
   .item-link.l4:hover, .item-link.l5:hover{
-    color: purple;
+    color: rgb(245, 12, 132);
   }
   
   .item-link.l5::before{
@@ -155,7 +155,7 @@
     left: 50%;
     
     border-radius: 5px;
-    background-color: purple;
+    background-color: rgb(245, 12, 132);
     transform: translatex(-50%);
   }
   .item-link.l6{
@@ -167,7 +167,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: purple;
+    background-color: rgb(245, 12, 132);
     color: #fff;
   }
   
@@ -194,7 +194,7 @@
     top: 20px;
     left: 50%;
     transform: translatex(-50%);
-    color: purple;
+    color: rgb(245, 12, 132);
   }
 
   a:hover {
