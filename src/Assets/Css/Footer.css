@@ -103,6 +103,7 @@ ul {
     /* float: left; */
     width: 50%;
     margin-bottom: 12px;
+    font-size: 18px;
   }
   .footer-widget ul li a:hover {
     color: rgb(245, 12, 132);
