@@ -7,7 +7,7 @@ function Header() {
                     <li className="item-list">
                         <a className="item-link l6" href="#">
                             <div className="item-icon-6"><i className="fas fa-home icon"></i></div>
-                            <p className="item-text-6">Home</p>
+                            <a href='/'><p className="item-text-6">Home</p></a>
                         </a>
                     </li>
                     <li className="item-list">
