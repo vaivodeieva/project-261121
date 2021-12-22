@@ -7,7 +7,7 @@
 
 :root {
     --white:    #FFFFFF;
-    --red:      #FF3F3F;
+    --red:      rgb(245, 12, 132);
     --dark-red: #AA2727;
     
     font-family: 'Yanone Kaffeesatz', sans-serif;
