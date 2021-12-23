@@ -2,7 +2,7 @@ function Workout() {
 
     return (
         <div>
-
+            
         </div>
     )
 }
