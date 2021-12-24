@@ -1,13 +1,12 @@
 import '../Assets/Css/Workout.css';
 
 function Workout() {
-
     return (
         <div className='workout-container'>
             <center>
                 <h1>Workout Generator</h1>
             </center>
-            <br />
+            <br/>
             <div className="workout-container-inner">
                 <input type="text-workout" name="valueId" id="myName" placeholder="Enter Name" />
                 <input type="button" id="btn-workout" className="btn" value="Generate" /><br/>
@@ -20,5 +19,4 @@ function Workout() {
         </div>
     )
 }
-
 export default Workout;

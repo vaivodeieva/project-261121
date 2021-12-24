@@ -61,7 +61,7 @@ input[type="text-workout"]:focus {
   overflow-y: auto;
 }
 
-li {
+/* li {
   height: 0px;
   list-style-type: none;
   display: inline-block;
@@ -71,7 +71,7 @@ li {
   margin-right: 35px;
   width: 200px;
   opacity: 0.1;
-}
+} */
 
 .li-h4 {
   border-top: 1px solid #56445d;
@@ -82,20 +82,13 @@ li {
   color: #56445d;
 }
 
-footer {
-  position: absolute;
-  bottom: 0px;
-  margin: 0 0;
-  font-size: 0.7em;
-}
-
 .li-workout {
   height: 10em;
   width: 10em;
 }
 
 /*Checkbox CSS*/
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   position: absolute;
   display: none;
 }
@@ -125,4 +118,4 @@ label:hover input[type="checkbox"] ~ i.fa {
   color: blueviolet;
 }
 
-
+ */
