@@ -19,7 +19,7 @@ function Header() {
                     <li className="item-list">
                         <a className="item-link l6" href="#">
                             <div className="item-icon-6"><i className="fas fa-fire icon"></i></div>
-                            <p className="item-text-6">Workout</p>
+                            <a href='/workout'><p className="item-text-6">Workout</p></a>
                         </a>
                     </li>
                     <li className="item-list">
