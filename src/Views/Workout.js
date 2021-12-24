@@ -3,12 +3,12 @@ import '../Assets/Css/Workout.css';
 function Workout() {
 
     return (
-        <div>
+        <div className='workout-container'>
             <center>
                 <h1>Workout Generator</h1>
             </center>
             <br />
-            <div className="container">
+            <div className="workout-container-inner">
                 <input type="text" name="valueId" id="myName" placeholder="Enter Name" />
                 <input type="button" id="myButton" className="btn" value="Generate" /><br/>
                     <ul id="result">
@@ -17,7 +17,6 @@ function Workout() {
                         <img className="workout" src="http://gdurl.com/57cs" alt="Pushups" />
                     </ul>
             </div>
-
         </div>
     )
 }
