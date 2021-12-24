@@ -9,8 +9,8 @@ function Workout() {
             </center>
             <br />
             <div className="workout-container-inner">
-                <input type="text" name="valueId" id="myName" placeholder="Enter Name" />
-                <input type="button" id="myButton" className="btn" value="Generate" /><br/>
+                <input type="text-workout" name="valueId" id="myName" placeholder="Enter Name" />
+                <input type="button" id="btn-workout" className="btn" value="Generate" /><br/>
                     <ul id="result">
                         <h4>Are you warmed up?</h4>
                         <img className="workout" src="http://gdurl.com/WfqX" alt="Crunches" />
