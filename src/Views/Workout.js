@@ -1,3 +1,5 @@
+import '../Assets/Css/Workout.css';
+
 function Workout() {
 
     return (
