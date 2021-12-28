@@ -229,7 +229,7 @@ function Workout() {
     
     function generateCalendar() {
         let scheduleList = $(".js-schedule-list");
-    
+   
         $.each(schedule, function (key, value) {
             let day = value.day;
             let videos = value.videos;
