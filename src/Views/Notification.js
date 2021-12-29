@@ -1,4 +1,4 @@
-function Notification() {
+function Notifications() {
 
 return (
     <div>
@@ -7,4 +7,4 @@ return (
 )
 }
 
-export default Notification;
+export default Notifications;
