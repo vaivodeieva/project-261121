@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import Workout from './Views/Workout';
 import Page404 from './Views/Page404';
 import Notifications from './Views/Notifications';
+import Settings from './Views/Settings';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/workout" element={<Workout />} />
             <Route path="/notifications" element={<Notifications />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Page404 /> } />
           </Routes>
         <Footer />
