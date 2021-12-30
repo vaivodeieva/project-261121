@@ -1,3 +1,4 @@
+import '../Assets/Css/Notifications.css';
 function Notifications() {
 
 return (
