@@ -222,7 +222,7 @@ function Workout() {
         }
     ];
     
-    $(document).ready(function () {
+    $(function () {
         generateCalendar();
         setStatus();
     });
