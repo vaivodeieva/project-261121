@@ -5,31 +5,31 @@ function Header() {
             <div className="containers header-container">
                 <ul className="list">
                     <li className="item-list">
-                        <a className="item-link l6" href="#">
+                        <a className="item-link l6" href="/">
                             <div className="item-icon-6"><i className="fas fa-home icon"></i></div>
-                            <a href='/'><p className="item-text-6">Home</p></a>
+                            <p className="item-text-6">Home</p>
                         </a>
                     </li>
                     <li className="item-list">
-                        <a className="item-link l6" href="#">
+                        <a className="item-link l6" href="/search">
                             <div className="item-icon-6"><i className="fas fa-search icon"></i></div>
-                            <a href='/search'><p className="item-text-6">Search</p></a>
+                            <p className="item-text-6">Search</p>
                         </a>
                     </li>
                     <li className="item-list">
-                        <a className="item-link l6" href="#">
+                        <a className="item-link l6" href="/workout">
                             <div className="item-icon-6"><i className="fas fa-fire icon"></i></div>
-                            <a href='/workout'><p className="item-text-6">Workout</p></a>
+                           <p className="item-text-6">Workout</p>
                         </a>
                     </li>
                     <li className="item-list">
-                        <a className="item-link l6" href="#">
+                        <a className="item-link l6" href="/notifications">
                             <div className="item-icon-6"><i className="fas fa-bell icon"></i></div>
                             <p className="item-text-6">Notification</p>
                         </a>
                     </li>
                     <li className="item-list">
-                        <a className="item-link l6" href="#">
+                        <a className="item-link l6" href="/settings">
                             <div className="item-icon-6"><i className="fas fa-cog icon"></i></div>
                             <p className="item-text-6">Settings</p>
                         </a>
