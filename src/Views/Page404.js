@@ -26,7 +26,7 @@ function Page404() {
                     <div className="number -with-shadow">0</div>
                 </div>
                 <div className="oops-message">
-                    <div className="test">Opps... looks like You got lost</div><a className="button" href="">Try again</a>
+                    <div className="test">Opps... looks like You got lost</div><a className="button" href="/">Home</a>
                 </div>
             </div>
 
