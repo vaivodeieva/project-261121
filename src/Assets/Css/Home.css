@@ -7,10 +7,10 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
     url("https://pbs.twimg.com/media/DWH8pTQW4AAdp4F.jpg") no-repeat center;
   background-size: cover;
-  height: 100vh;
+  height: 150vh;
 }
 .container {
-  padding: 250px 40px;
+  padding: 150px 40px;
   text-align: center;
   color: white;
   font-size: 50px;

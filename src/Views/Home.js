@@ -4,7 +4,6 @@ function Home() {
 
     return (
         <div className='home-container'>
-            
                 <div class="container">
                     <form action="">
                         <h1>Boost your Performance</h1>
