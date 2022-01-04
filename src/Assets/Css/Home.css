@@ -1,0 +1,56 @@
+.home-container {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url("https://pbs.twimg.com/media/DWH8pTQW4AAdp4F.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.container {
+  padding: 250px 40px;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  opacity: 0.7;
+}
+.container p {
+  max-width: 600px;
+  margin: 25px auto;
+  font-size: 40px;
+  font-weight: 600;
+}
+.email-box {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+.email-box i {
+  background: #252525;
+  width: 65px;
+  line-height: 40px;
+}
+.tbox,
+.btn {
+  border: none;
+  outline: none;
+}
+.tbox {
+  width: 0px;
+  transition: 0.6s;
+}
+.email-box:hover > .tbox,
+.tbox:focus {
+  width: 560px;
+  padding: 0 10px;
+}
+
+.btn {
+  background: green;
+  color: whitesmoke;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
