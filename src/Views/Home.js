@@ -10,7 +10,7 @@ function Home() {
                         <p>9 weeks program, I'll Teach You 9 Proven Ways to Increase Your Lift </p>
                         <div className="email-box">
                             <i className="fas fa-envelope"></i>
-                            <input className="tbox" type="email" name="" value="" placeholder="Enter your email"/>
+                            <input className="tbox" type="email" name="" placeholder="Enter your email"/>
                                 <button className="btn" type="button" name="button">Subscribe</button>
                         </div>
                     </form>
