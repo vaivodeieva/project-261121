@@ -9,7 +9,7 @@ body {
   background-size: cover;
   height: 150vh;
 }
-.container {
+.container-inner {
   padding: 150px 40px;
   text-align: center;
   color: white;
