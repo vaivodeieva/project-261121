@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body {
+.settings-container {
   background: linear-gradient(to right, #329085, #7ed386);
 }
 

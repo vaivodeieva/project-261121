@@ -28,7 +28,7 @@ $("nav a").click(function (e) {
   
 
     return (
-        <div>
+        <div className="settings-container">
             <div class="container">
                 <div id="CTA">
                     <h1>Get ₹99</h1>
