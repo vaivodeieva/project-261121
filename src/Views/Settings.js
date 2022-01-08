@@ -33,7 +33,7 @@ $("nav a").click(function (e) {
                 <div id="CTA">
                     <h1>Get $99</h1>
                 </div>
-                <div className="leftbox">
+                <div className="leftbox1">
                     <nav>
                         <a id="profile" className="active"><i className="fa fa-user"></i></a>
                         <a id="payment"><i className="fa fa-credit-card"></i></a>
@@ -48,7 +48,7 @@ $("nav a").click(function (e) {
                     <div className="profile">
                         <h1>Personal Info</h1>
                         <h2>Full Name</h2>
-                        <p>Mehul Kumar Nirala <button className="btn">update</button></p>
+                        <p>John Doe <button className="btn">update</button></p>
                         <h2>Birthday</h2>
                         <p>May 25</p>
                         <h2>Gender</h2>

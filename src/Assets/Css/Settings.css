@@ -18,7 +18,7 @@
   box-shadow: 2px 4px 6px rgba(55, 52, 73, 0.4), inset -2px -2px 4px white;
 }
 
-.leftbox {
+.leftbox1 {
   background: rgba(126, 211, 134, 0.6);
   float: left;
   position: absolute;
@@ -30,10 +30,10 @@
   top: -2.45%;
   left: 5%;
 }
-.leftbox nav .active {
+.leftbox1 nav .active {
   color: #2b7d74;
 }
-.leftbox nav a {
+.leftbox1 nav a {
   color: #f2f2f2;
   font-size: 1.45em;
   display: block;
@@ -42,7 +42,7 @@
   text-align: center;
   transition: all 0.4s ease-in-out;
 }
-.leftbox nav a:hover {
+.leftbox1 nav a:hover {
   color: #2b7d74;
   transform: scale(1.2);
   cursor: pointer;
@@ -167,9 +167,9 @@ footer p strong:hover {
   font-weight: 1500;
   font-size: 4em;
 }
-footer .julie {
+/* footer .julie {
   font-size: 0.5em;
-}
+} */
 footer a {
   color: #ffffff;
   text-decoration: none;
