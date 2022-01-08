@@ -234,7 +234,7 @@ function Workout() {
             let day = value.day;
             let videos = value.videos;
             let status = value.status;
-            if (videos.length == 0) {
+            if (videos.length === 0) {
                 let restHTML =
                     "<div class='js-day' data-status='false'><div class='workout__rest'>REST</div></div>";
                 scheduleList.append(restHTML);
@@ -299,7 +299,7 @@ function Workout() {
     
             let daysDiv = $('[data-status="false"]').eq(key);
     
-            if (videos.length == 0) {
+            if (videos.length === 0) {
                 $(daysDiv).html("<div class='workout__rest'>REST</div></div>");
             } else if (videos.length > 0) {
                 let allVideos = "";
