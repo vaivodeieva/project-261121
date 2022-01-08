@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto");
-* {
+/* * {
   padding: 0;
-}
+} */
 
 .settings-container {
   background: linear-gradient(to right, #329085, #7ed386);
 }
 
-.container {
+.container-sett {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.1));
   width: 540px;
   height: 420px;
