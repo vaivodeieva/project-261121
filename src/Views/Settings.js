@@ -31,7 +31,7 @@ $("nav a").click(function (e) {
         <div className="settings-container">
             <div className="container-sett">
                 <div id="CTA">
-                    <h1>Get ₹99</h1>
+                    <h1>Get $99</h1>
                 </div>
                 <div className="leftbox">
                     <nav>
