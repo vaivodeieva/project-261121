@@ -110,7 +110,7 @@ $("nav a").click(function (e) {
                         <p></p>
                         <h2>Your Devices <button className="btn">Manage Devices</button></h2>
                         <p></p>
-                        <h2>Referrals <button className="btn">get ₹100</button></h2>
+                        <h2>Referrals <button className="btn">get $100</button></h2>
                         <p></p>
                     </div>
 
