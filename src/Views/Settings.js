@@ -1,124 +1,96 @@
 import '../Assets/Css/Settings.css';
-import $ from 'jquery';
 
 function Settings() {
-$("nav a").click(function (e) {
-    e.preventDefault();
-    $("nav a").removeClass("active");
-    $(this).addClass("active");
-    if (this.id === !"payment") {
-      $(".payment").addClass("noshow");
-    } else if (this.id === "payment") {
-      $(".payment").removeClass("noshow");
-      $(".rightbox").children().not(".payment").addClass("noshow");
-    } else if (this.id === "profile") {
-      $(".profile").removeClass("noshow");
-      $(".rightbox").children().not(".profile").addClass("noshow");
-    } else if (this.id === "subscription") {
-      $(".subscription").removeClass("noshow");
-      $(".rightbox").children().not(".subscription").addClass("noshow");
-    } else if (this.id === "privacy") {
-      $(".privacy").removeClass("noshow");
-      $(".rightbox").children().not(".privacy").addClass("noshow");
-    } else if (this.id === "settings") {
-      $(".settings").removeClass("noshow");
-      $(".rightbox").children().not(".settings").addClass("noshow");
-    }
-  });
-  
 
-    return (
-        <div className="settings-container">
-            <div className="container-sett">
-                <div id="CTA">
-                    <h1>Get $99</h1>
-                </div>
-                <div className="leftbox1">
-                    <nav>
-                        <a id="profile" className="active"><i className="fa fa-user"></i></a>
-                        <a id="payment"><i className="fa fa-credit-card"></i></a>
-                        <a id="subscription"><i className="fa fa-tv"></i></a>
-                        <a id="privacy"><i className="fa fa-tasks"></i></a>
-                        <a id="settings"><i className="fa fa-cog"></i></a>
-                    </nav>
-                </div>
-
-                <div className="rightbox">
-
-                    <div className="profile">
-                        <h1>Personal Info</h1>
-                        <h2>Full Name</h2>
-                        <p>John Doe <button className="btn">update</button></p>
-                        <h2>Birthday</h2>
-                        <p>May 25</p>
-                        <h2>Gender</h2>
-                        <p>Male</p>
-                        <h2>Email</h2>
-                        <p>example@example.com <button className="btn">update</button></p>
-                        <h2>Password </h2>
-                        <p>••••••• <button className="btn">Change</button></p>
-                    </div>
-
-                    <div className="payment noshow">
-                        <h1>Payment Info</h1>
-                        <h2>Payment Method</h2>
-                        <p>Mastercard •••• •••• •••• 0000 <button className="btn">update</button></p>
-                        <h2>Billing Address</h2>
-                        <p>1234 Example Ave | Earth <button className="btn">change</button></p>
-                        <h2>Zipcode</h2>
-                        <p>000000</p>
-                        <h2>Billing History</h2>
-                        <p>2018<button className="btn">view</button></p>
-                        <h2>Redeem Gift Subscription </h2>
-                        <p><input type="text" placeholder="Enter Gift Code"></input> <button className="btn">Redeem</button></p>
-                    </div>
-
-                    <div className="subscription noshow">
-                        <h1>Your Subscription</h1>
-                        <h2>Payment Date</h2>
-                        <p>05-15-2020 <button className="btn">pay now</button></p>
-                        <h2>Your Next Charge</h2>
-                        <p>$ 599<span> includes tax</span></p>
-                        <h2>Hulu Base Plan</h2>
-                        <p>Limited Commercials <button className="btn">change plan</button></p>
-                        <h2>Add-ons</h2>
-                        <p>None <button className="btn">manage</button></p>
-                        <h2>Monthly Recurring Total </h2>
-                        <p>$ 499/month</p>
-                    </div>
-
-                    <div className="privacy noshow">
-                        <h1>Privacy Settings</h1>
-                        <h2>Manage Email Notifications<button className="btn">manage</button></h2>
-                        <p></p>
-                        <h2>Manage Privacy Settings<button className="btn">manage</button></h2>
-                        <p></p>
-                        <h2>View Terms of Use <button className="btn">view</button></h2>
-                        <p></p>
-                        <h2>Personalize Ad Experience <button className="btn">update</button></h2>
-                        <p></p>
-                        <h2>Protect Your Account <button className="btn">protect</button></h2>
-                        <p></p>
-                    </div>
-                    <div className="settings noshow">
-                        <h1>Account Settings</h1>
-                        <h2>Sync Watchlist to My Stuff<button className="btn">sync</button></h2>
-                        <p></p>
-                        <h2>Hold Your Subscription<button className="btn">hold</button></h2>
-                        <p></p>
-                        <h2>Cancel Your Subscription <button className="btn">cancel</button></h2>
-                        <p></p>
-                        <h2>Your Devices <button className="btn">Manage Devices</button></h2>
-                        <p></p>
-                        <h2>Referrals <button className="btn">get $100</button></h2>
-                        <p></p>
-                    </div>
-
-                </div>
-            </div>
-
+  return (
+    <div>
+<div class='container'>
+  <header>
+    <ul class='menu'>
+      <li class='menu-item active'>
+        <i class='fa fa-gear'></i>
+      </li>
+      <li class='menu-item'>
+        <i class='fa fa-user'></i>
+      </li>
+      <li class='menu-item'>
+        <i class='fa fa-trophy'></i>
+      </li>
+      <li class='menu-item'>
+        <i class='fa fa-bar-chart-o'></i>
+      </li>
+    </ul>
+  </header>
+  <div class='settings'>
+    <div class='setting'>
+      <div class='name'>
+        Force touch enabled
+      </div>
+      <div class='info'>
+        Push the screen with various intensity to enable features within your applications.
+        <div class='switch'>
+          <input checked='checked' id='touch-enabled' type='checkbox'/>
+          <label for='touch-enabled'></label>
         </div>
-    )
+      </div>
+    </div>
+    <div class='setting'>
+      <div class='name'>
+        One click login
+      </div>
+      <div class='info'>
+        Sign in to your personal and local media accounts using only one press of your finger.
+        <div class='switch'>
+          <input id='one-click' type='checkbox'/>
+          <label for='one-click'></label>
+        </div>
+      </div>
+    </div>
+    <div class='setting'>
+      <div class='name'>
+        auto-subscribe
+      </div>
+      <div class='info'>
+        Don't worry about your service turning off and losing all of your progress and projects
+        <div class='switch'>
+          <input checked='checked' id='auto-sub' type='checkbox'/>
+          <label for='auto-sub'></label>
+        </div>
+      </div>
+    </div>
+    <div class='setting'>
+      <div class='name'>
+        screen brightness
+      </div>
+      <div class='info'>
+        <div class='slider'>
+          <input type='range'/>
+        </div>
+        <br/>
+        <div class='checkbox'>
+          <input checked='checked' id='auto-brightness' type='checkbox'/>
+          <label for='auto-brightness'></label>
+        </div>
+        <div class='checkbox-label'>
+          <label for='auto-brightness'>
+            Auto-adjust screen brightness
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class='footer'>
+      <button class='button cancel'>
+        Cancel
+      </button>
+      <button class='button save'>
+        Save
+      </button>
+    </div>
+  </div>
+</div>
+
+    </div>
+  )
 }
 
 export default Settings;
