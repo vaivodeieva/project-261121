@@ -1,406 +1,248 @@
 import '../Assets/Css/Workout.css';
 import $ from 'jquery';
+
+let workRunning;
+        let breakRunning;
+        let lastWork;
+        let diff;
+        let breakDuration;
+        let workDuration;
+        let lastBreak;
+        let sessions;
+        let time;
+        let seconds;
+        let minutes;
+        let start;
+        let intervalId;
+        let applauseAudio;
+        
 function Workout() {
-    let schedule = [
-        {
-            day: 1,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 2,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/3Pr6n-nKfMA", image: "workout-core-arms.webp" },
-                { link: "https://youtu.be/6TmQiugy_qw", image: "workout-line-abs.webp" }
-            ]
-        },
-        {
-            day: 3,
-            videos: [
-                { link: "https://youtu.be/004CudS_3Ew", image: "workout-2000reps.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 4,
-            videos: []
-        },
-        {
-            day: 5,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/I9nG-G4B5Bs", image: "workout-lower-burn.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 6,
-            videos: [
-                { link: "https://youtu.be/ro0svIr1UTI", image: "workout-1000reps.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 7,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/V4sWpLJcQoU", image: "workout-standing-abs.webp" },
-                { link: "https://youtu.be/3Pr6n-nKfMA", image: "workout-core-arms.webp" }
-            ]
-        },
-        {
-            day: 8,
-            videos: [
-                { link: "https://youtu.be/EUruBzhv7Kk", image: "workout-slim-thigh.webp" },
-                { link: "https://youtu.be/ZveSMkUr0l0", image: "workout-lower-abs.webp" },
-                { link: "https://youtu.be/j64BBgBGNIU", image: "workout-toned-arms.webp" }
-            ]
-        },
-        {
-            day: 9,
-            videos: [
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 10,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/6TmQiugy_qw", image: "workout-line-abs.webp" }
-            ]
-        },
-        {
-            day: 11,
-            videos: [
-                { link: "https://youtu.be/EUruBzhv7Kk", image: "workout-slim-thigh.webp" },
-                { link: "https://youtu.be/V4sWpLJcQoU", image: "workout-standing-abs.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 12,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/I9nG-G4B5Bs", image: "workout-lower-burn.webp" }
-            ]
-        },
-        {
-            day: 13,
-            videos: [
-                { link: "https://youtu.be/004CudS_3Ew", image: "workout-2000reps.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 14,
-            videos: []
-        },
-        {
-            day: 15,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/3Pr6n-nKfMA", image: "workout-core-arms.webp" }
-            ]
-        },
-        {
-            day: 16,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/6TmQiugy_qw", image: "workout-line-abs.webp" },
-                { link: "https://youtu.be/I9nG-G4B5Bs", image: "workout-lower-burn.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 17,
-            videos: [
-                { link: "https://youtu.be/EUruBzhv7Kk", image: "workout-slim-thigh.webp" },
-                { link: "https://youtu.be/V4sWpLJcQoU", image: "workout-standing-abs.webp" },
-                { link: "https://youtu.be/j64BBgBGNIU", image: "workout-toned-arms.webp" }
-            ]
-        },
-        {
-            day: 18,
-            videos: [
-                { link: "https://youtu.be/ro0svIr1UTI", image: "workout-1000reps.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 19,
-            videos: []
-        },
-        {
-            day: 20,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/3Pr6n-nKfMA", image: "workout-core-arms.webp" },
-                { link: "https://youtu.be/6TmQiugy_qw", image: "workout-line-abs.webp" }
-            ]
-        },
-        {
-            day: 21,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/EUruBzhv7Kk", image: "workout-slim-thigh.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 22,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/EUruBzhv7Kk", image: "workout-slim-thigh.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" }
-            ]
-        },
-        {
-            day: 23,
-            videos: [
-                { link: "https://youtu.be/ro0svIr1UTI", image: "workout-1000reps.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 24,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/I9nG-G4B5Bs", image: "workout-lower-burn.webp" }
-            ]
-        },
-        {
-            day: 25,
-            videos: [
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 26,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/2pLT-olgUJs", image: "workout-abs.webp" },
-                { link: "https://youtu.be/3Pr6n-nKfMA", image: "workout-core-arms.webp" }
-            ]
-        },
-        {
-            day: 27,
-            videos: [
-                { link: "https://youtu.be/2MoGxae-zyo", image: "workout-lose-weight.webp" },
-                { link: "https://youtu.be/V4sWpLJcQoU", image: "workout-standing-abs.webp" },
-                { link: "https://youtu.be/ZveSMkUr0l0", image: "workout-lower-abs.webp" }
-            ]
-        },
-        {
-            day: 28,
-            videos: [
-                { link: "https://youtu.be/004CudS_3Ew", image: "workout-2000reps.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
-        },
-        {
-            day: 29,
-            videos: []
-        },
-        {
-            day: 30,
-            videos: [
-                { link: "https://youtu.be/EUruBzhv7Kk", image: "workout-slim-thigh.webp" },
-                { link: "https://youtu.be/ZveSMkUr0l0", image: "workout-lower-abs.webp" },
-                { link: "https://youtu.be/j64BBgBGNIU", image: "workout-toned-arms.webp" },
-                { link: "https://youtu.be/L_xrDAtykMI", image: "workout-flexibility.webp" }
-            ]
+    let workPhrases = {
+        5: "The first step is to start",
+        4: "Starting is the first step",
+        3: "Nothing is imposible",
+        2: "Don't let your dreams be dreams",
+        1: "You are almost there",
+        0: "You are the best!"
+      };
+      
+      let breakPhrases = {
+        5: "Piece of cake, isn't it?",
+        4: "Piece of cake, isn't it?",
+        3: "Just breathe",
+        2: "Lets get back on track",
+        1: "You can do this!",
+        0: "Are you ready?"
+      };
+      
+     let workGif = {
+        5: "https://m.popkey.co/8bcfb9/EGJ0x.gif",
+        4: "https://media.giphy.com/media/ACcXRXwUqJ6Ok/giphy.gif",
+        3: "http://media2.onsugar.com/files/2013/12/23/642/n/1922729/8433595825f41c77_clam-series.gif.xxxlarge.gif",
+        2: "https://45.media.tumblr.com/53a5c5102d7125817bbf578c620a0abd/tumblr_n070t4x59S1rfdoxno1_500.gif",
+        1: "https://media.giphy.com/media/vuIVvW0NsWBzy/giphy.gif",
+        0: "http://photos.orlandoweekly.com/wp-content/uploads/2014/01/1-Workout.gif"
+      };
+      
+      let breakGif = {
+        5: "https://media.tumblr.com/tumblr_lzerkmTo421qmioz3.gif",
+        4: "https://ak-hdl.buzzfed.com/static/enhanced/webdr01/2013/5/30/14/anigif_enhanced-buzz-2410-1369939749-19.gif",
+        3: "https://31.media.tumblr.com/tumblr_m8x5tv8BkR1qcjieco1_500.gif",
+        2: "https://38.media.tumblr.com/dfe06d90dac77b3350c283688d3757d5/tumblr_inline_nnedd4WeXy1qfineg_500.gif",
+        1: "https://31.media.tumblr.com/4f2a6cdde93e0a059a5ddcb303071fe7/tumblr_n81ypmYvha1rvhqlvo1_500.gif",
+        0: "http://media2.giphy.com/media/Eccdry010Mj1m/giphy.gif"
+      };
+      
+      let beepAudio = new Audio("http://www.soundjay.com/button/sounds/beep-08b.mp3");
+      applauseAudio = new Audio(
+        "http://www.soundjay.com/human/sounds/applause-8.mp3"
+      );
+      
+      function beep() {
+        if (diff < 3) {
+          beepAudio.play();
         }
-    ];
-    
-    $(function () {
-        generateCalendar();
-        setStatus();
-    });
-    
-    function generateCalendar() {
-        let scheduleList = $(".js-schedule-list");
-   
-        $.each(schedule, function (_key, value) {
-            // let day = value.day;
-            let videos = value.videos;
-            // let status = value.status;
-            if (videos.length === 0) {
-                let restHTML =
-                    "<div class='js-day' data-status='false'><div class='workout__rest'>REST</div></div>";
-                scheduleList.append(restHTML);
-            } else if (videos.length > 0) {
-                let allVideos = "";
-                let grammar = videos.length === 1 ? "video" : "videos";
-    
-                $.map(videos, function (key, _value) {
-                    let videoHTML =
-                        '<a href="' +
-                        key.link +
-                        '" target="_blank">' +
-                        '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/' +
-                        key.image +
-                        '" alt="Workout Video Image"/></a>';
-                    allVideos = allVideos + videoHTML;
-                });
-    
-                let workHTML =
-                    "<div class='js-day' data-status='false'><div class='workout__info'>" +
-                    videos.length +
-                    " " +
-                    grammar +
-                    "</div><div class='workout__links'>" +
-                    allVideos +
-                    "</div></div>";
-    
-                scheduleList.append(workHTML);
-            }
-        });
-    }
-    
-    function setStatus() {
-        $(".js-did-workout").on("click", function () {
-            let currentDay = $(".js-schedule-list").find(
-                '.js-day[data-status="false"]:first'
+      }
+      
+      function printTime() {
+        if (workRunning) {
+          counterRunning(workDuration);
+          beep();
+          $("#tittle")
+            .text(workPhrases[Math.floor((diff / workDuration) * 5)])
+            .fadeIn(1000);
+      
+          if (diff < 1) {
+            $("body").css(
+              "background-image",
+              "url(" + breakGif[Math.floor(Math.random() * 6)] + ")"
             );
-            currentDay.attr("data-status", "success");
-            schedule.shift();
-            checkNextDay();
-        });
-    
-        $(".js-no-workout").on("click", function () {
-            let currentDay = $(".js-schedule-list").find(
-                '.js-day[data-status="false"]:first'
+            workRunning = false;
+            breakRunning = true;
+            counterStart();
+            printTime();
+          }
+        } else if (breakRunning) {
+          counterRunning(breakDuration);
+          beep();
+          $("#tittle").text(breakPhrases[Math.floor((diff / breakDuration) * 5)]);
+          $("body").css(
+            "background-image",
+            "url(https://media.giphy.com/media/eYbS7lujv4Ig0/giphy.gif)"
+          );
+      
+          if (diff < 1) {
+            $("body").css(
+              "background-image",
+              "url(" + workGif[Math.floor(Math.random() * 6)] + ")"
             );
-            currentDay.attr("data-status", "failed");
-            let originalDay = currentDay.data("day");
-            updateCalendar(originalDay);
-            updateDays();
-            checkNextDay();
-        });
-    }
-    
-    function updateCalendar(_day) {
-        let scheduleList = $(".js-schedule-list");
-        scheduleList.append('<div class="js-day" data-status="false"></div>');
-    
-        $.each(schedule, function (key, value) {
-            // let day = value.day;
-            let videos = value.videos;
-    
-            let daysDiv = $('[data-status="false"]').eq(key);
-    
-            if (videos.length === 0) {
-                $(daysDiv).html("<div class='workout__rest'>REST</div></div>");
-            } else if (videos.length > 0) {
-                let allVideos = "";
-                let grammar = videos.length === 1 ? "video" : "videos";
-    
-                $.map(videos, function (key, _value) {
-                    let videoHTML =
-                        '<a href="' +
-                        key.link +
-                        '" target="_blank">' +
-                        '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/' +
-                        key.image +
-                        '" alt="Workout Video Image"/></a>';
-                    allVideos = allVideos + videoHTML;
-                });
-    
-                $(daysDiv).html(
-                    "<div class='workout__info'>" +
-                        videos.length +
-                        " " +
-                        grammar +
-                        "</div><div class='workout__links'>" +
-                        allVideos +
-                        "</div>"
-                );
+            workRunning = true;
+            breakRunning = false;
+            counterStart();
+            sessions--;
+            printTime();
+            if (sessions < 1) {
+              applauseAudio.play();
+              clearInterval(intervalId);
+              $("#tittle").text("Great Job!");
+              $("#secondTittle").text("");
+              $("body").css(
+                "background-image",
+                "url(https://i.imgur.com/NY5OPT1.gif?noredirect)"
+              );
             }
-        });
-    }
-    
-    function updateDays() {
-        $(".js-day-count").text($(".js-day").length);
-    }
-    
-    function checkNextDay() {
-        let dayAfter = $('.js-day[data-status="false"]').first();
-    
-        if ($('.js-day[data-status="false"]').length == 0) {
-            $(".rest-day, .workout-day").css("display", "none");
-            $(".amazing-day").css("display", "flex");
-        } else if ($(".workout__rest", dayAfter).length) {
-            $(".rest-day").css("display", "flex");
-            $(".workout-day").css("display", "none");
+          }
         } else {
-            $(".rest-day").css("display", "none");
-            $(".workout-day").css("display", "flex");
+          $("#tittle").text("Take your time and start when you feel good");
         }
-    }
+      }
+      
+      function counterStart() {
+        start = Date.now();
+        diff = 0;
+        seconds = 0;
+        minutes = 0;
+        time = "";
+      }
+      
+      function counterRunning(duration) {
+        diff = duration - (Date.now() - start) / 1000;
+      
+        minutes = Math.floor(diff / 60);
+        seconds = Math.floor(diff % 60);
+      
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+      
+        time = minutes + ":" + seconds;
+      
+        if (diff >= 0) {
+          $("#secondTittle").text(time);
+        }
+      }
+      
+      function startPause() {
+        workRunning = false;
+        breakRunning = false;
+        $("#pause").text("Start timer");
+      }
+      
+      $(document).ready(function () {
+        $("#start").on({
+          click: function () {
+            workRunning = true;
+            breakRunning = false;
+            sessions = parseInt($("#sessions").val());
+            breakDuration = 60 * parseInt($("#break").val());
+            workDuration = 60 * parseInt($("#work").val());
+      
+            if (sessions > 0 && workDuration > 0 && breakDuration > 0) {
+              $("#secondTittle").toggle();
+              $("#timeSet").toggle();
+              $("#counterButtons").toggle();
+      
+              counterStart();
+              $("body").css(
+                "background-image",
+                "url(" + workGif[Math.floor(Math.random() * 6)] + ")"
+              );
+              printTime();
+              intervalId = setInterval(printTime, 1000);
+            }
+          }
+        });
+      
+        $("#pause").on({
+          click: function () {
+            lastWork = workRunning;
+            lastBreak = breakRunning;
+            $("#pause").toggle();
+            $("#startAgain").toggle();
+            if (workRunning) {
+              workDuration = diff;
+              workRunning = false;
+            } else {
+              breakDuration = diff;
+              breakRunning = false;
+            }
+          }
+        });
+      
     
+        $("#startAgain").on({
+          click: function () {
+            $("#pause").toggle();
+            $("#startAgain").toggle();
+             workRunning = lastWork;
+            breakRunning = lastBreak;
+            counterStart();
+          }
+        });
+      
+        $("#setTime").on({
+          click: function () {
+            $("#tittle").text("Welcome to GIFodoro");
+            $("body").css(
+              "background-image",
+              "url(https://www.athletenetwork.com/userfiles/images/brad%20pitt%20workout.gif)"
+            );
+            $("#timeSet").toggle();
+            $("#counterButtons").toggle();
+            $("#secondTittle").toggle();
+            clearInterval(intervalId);
+          }
+        });
+      });
+      
     return (
         <div>
+                <div class="container-flex">
+                    <h1 id="tittle">Welcome to GIFodoro</h1>
+                    <h2 id="secondTittle" style={{display: 'none'}}></h2>
 
-            <main className='main-container'>
-                <h1>30-Day Workout Challenge</h1>
-                <section class="workout-main">
-                    <div class="workout-question">
-                        <div class="workout-day">
-                            <p>Did you complete the workout today?</p><a class="button js-did-workout">Yes, I did!</a><a class="button button--white js-no-workout">Oh No</a>
+                    <div id="timeSet">
+                        <div class="inputs">
+                            <label for="break">Break time</label>
+                            <input id="break" type="text" value="5"/>
                         </div>
-                        <div class="rest-day">
-                            <p>A gift from the heavens! It's a rest day today.</p><a class="button js-did-workout">Woohoo!</a>
+                        <div class="inputs">
+                            <label for="Work">Work time</label>
+                            <input id="work" type="text" value="25"/>
                         </div>
-                        <div class="amazing-day">
-                            <p>You did it! 🎉🎉🎉 It only took you<span class="js-day-count">30</span>
-                                days.
-                            </p>
+                        <div class="inputs">
+                            <label for="sessions">Sessions</label>
+                            <input id="sessions" type="text" value="2"/>
                         </div>
+
+                        <button class="btn" id="start"><span class="button-text">Lets Do It</span></button>
                     </div>
-                    <div class="schedule-list js-schedule-list"></div>
-                </section>
-                <aside>
-                    <p>At this rate, you will complete the challenge in<span class="large"><span class="js-day-count">30</span>
-                        days</span></p>
-                </aside>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 437.79 269.44">
-                    <path class="cls-1" d="M388.02 228.31l-124.14-.43v-.04l-10.41.02-10.42-.02v.04l-193.28.43L0 269.44H437.79l-49.77-41.13z"></path>
-                    <path class="cls-2" d="M56.6 35.79s-21.36 2.3-26.11 17.51 14.39 36 33.78 21.3z"></path>
-                    <path class="cls-3" d="M78.33 89.6l20.03 17.82 16.97-16.11L82.3 67.89 78.33 89.6z"></path>
-                    <path class="cls-4" d="M87.9 98.11l-3.23-20.07-3.8 13.82 7.03 6.25z"></path>
-                    <path class="cls-3" d="M46.15 47.2s-9.47 7.73-2.51 21.22c0 0 2.55 5.19 10.08 19.13 4 7.36 13.87 14.17 22.72 8.4 4.29-2.8 7.61-8 10-13.79L89.27 73c5.09-23.9-22.33-41.79-41.72-26.94-.47.38-.93.75-1.4 1.14z"></path>
-                    <path class="cls-3" d="M50.06 78l.19 10.36c-.09.93.7 1.88 1.66 1.47L57.12 88z"></path>
-                    <path class="cls-2" d="M73.58 62.84S61.5 27.31 41.32 56.11c0 0 .71-23.62 31.06-26.93 6.35-.7 18.64 2.69 22.71 7.62 6.58 8-.63 21.37-.55 39.77L82.3 67.89c-1.82-1.89-8.72-5.05-8.72-5.05z"></path>
-                    <path class="cls-2" d="M54.7 39.56c-4.69 24.53 19.64 28 19.64 28l-.13-20.47S55.48 35.5 54.7 39.56z"></path>
-                    <path class="cls-3" d="M86.92 60.36a8.06 8.06 0 11-11.2-2.09 8.05 8.05 0 0111.2 2.09z"></path>
-                    <path d="M79 69.64s-1.77-3.81 1.85-7.64" stroke-linecap="round" stroke-linejoin="round" stroke="#b2b7e8" stroke-width=".72" fill="none"></path>
-                    <path class="cls-2" d="M109 15.06A19.12 19.12 0 1186.28.44 19.12 19.12 0 01109 15.06zM41.16 60.47s.88-10.15 13-15.29l1.37-4.57-12.87 3.78L36 51.05l-.12 8.74z"></path>
-                    <path class="cls-3" d="M265.1 158.42l31.11 66.33-8.53 24.85s-29.13-24.8-58-65.39v-37.7z"></path>
-                    <path class="cls-2" d="M203 114.5s30.2-10.85 48.43 14l16.46 27.9-18.68 14.69-11-6.63 2.42 12.41-10.95 7.56s-17.32-21.83-29.78-28z"></path>
-                    <path class="cls-3" d="M304.66 249.22l78.54-69.68-7-13.29-41 27.68s-42.53 20.16-50.55 37.07a17.43 17.43 0 00.92 16.17c4.13 6.39 13.43 7.11 19.09 2.05z"></path>
-                    <path class="cls-1" d="M378.08 173.43l.12.18a4.58 4.58 0 01-.8 5.94 9.63 9.63 0 00-2.79 4.91 4.24 4.24 0 002.81 5c7.09 2.36 24.77 8.7 37.93 17.35a11 11 0 0010.18 1l1.82-.74-41.49-54.8L368 164a4.42 4.42 0 00-2.07 5.75 4.42 4.42 0 005.21 2.47l2-.6a4.5 4.5 0 014.94 1.81z"></path>
-                    <path class="cls-2" d="M385.86 152.29a2.26 2.26 0 011.14-1.84 3.24 3.24 0 014.31.9l37.53 49.35a4.29 4.29 0 01-1.49 6.39z"></path>
-                    <path class="cls-6" d="M387.64 193.37s-1.19-1.75 1.4-5.79M390.87 194.84s-1.18-1.76 1.41-5.8M394.11 196.3s-1.18-1.75 1.41-5.79"></path>
-                    <path class="cls-4" d="M378.61 157s7.27 17.07 28.48 22.88l-21.23-27.62a11.75 11.75 0 00-7.25 4.74zM399.43 198.13s3.77-3.13 9-.22 4.8 7.53 4.8 7.53z"></path>
-                    <path class="cls-3" d="M168.62 100.56s18 18.62 34.39 13.94l-3.14 41.86s-32.46-4.25-43.74-11.88z"></path>
-                    <path class="cls-1" d="M119.71 142.73s10.19 7.91 25.18 0l11.24 1.75s12.49-17.39 12.49-43.92c0 0-33.23-27.66-61.53-13.35z"></path>
-                    <path class="cls-3" d="M102.35 87.65S133 80 138.91 95.49s-9.88 28.65-19.43 29.63-20.27-16.24-20.27-16.24z"></path>
-                    <path class="cls-3" d="M103.93 94.81s-9.23 7-4.72 28.84c3 14.55 5.91 32.37 7.52 42.67a10 10 0 009.92 8.48 10 10 0 0010-10c.08-17.65-.2-53.5-3.4-64.25z"></path>
-                    <path class="cls-7" d="M125.9 123.06s-.89-10.81.81-14.33M98.36 107.41s.5-7.18 5-10.8"></path>
-                    <path class="cls-3" d="M110.72 160.36a61.26 61.26 0 00-6.79 28.88c.35 16.38-1.35 48.62-5.24 59l13.5-4.73s15.08-50.35 14.5-83.12z"></path>
-                    <path class="cls-3" d="M102.07 230.07s-.73 8.81-18.42 13.41L65.79 248a2.18 2.18 0 00-2 2.17 2.17 2.17 0 002.21 2.18h38a8.1 8.1 0 008.16-8.87 15.19 15.19 0 00-2-5.59z"></path>
-                </svg>
-            </main>
+                    <div id="counterButtons">
+                        <button class="btn" id="setTime">Set time</button>
+                        <button class="btn" id="pause">Pause timer</button>
+                        <button class="btn" id="startAgain">Start timer</button>
+                    </div>
+                </div>
+
 
         </div>
     )
