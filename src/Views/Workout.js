@@ -230,10 +230,10 @@ function Workout() {
     function generateCalendar() {
         let scheduleList = $(".js-schedule-list");
    
-        $.each(schedule, function (key, value) {
-            let day = value.day;
+        $.each(schedule, function (_key, value) {
+            // let day = value.day;
             let videos = value.videos;
-            let status = value.status;
+            // let status = value.status;
             if (videos.length === 0) {
                 let restHTML =
                     "<div class='js-day' data-status='false'><div class='workout__rest'>REST</div></div>";
@@ -242,7 +242,7 @@ function Workout() {
                 let allVideos = "";
                 let grammar = videos.length === 1 ? "video" : "videos";
     
-                $.map(videos, function (key, value) {
+                $.map(videos, function (key, _value) {
                     let videoHTML =
                         '<a href="' +
                         key.link +
@@ -289,12 +289,12 @@ function Workout() {
         });
     }
     
-    function updateCalendar(day) {
+    function updateCalendar(_day) {
         let scheduleList = $(".js-schedule-list");
         scheduleList.append('<div class="js-day" data-status="false"></div>');
     
         $.each(schedule, function (key, value) {
-            let day = value.day;
+            // let day = value.day;
             let videos = value.videos;
     
             let daysDiv = $('[data-status="false"]').eq(key);
@@ -305,7 +305,7 @@ function Workout() {
                 let allVideos = "";
                 let grammar = videos.length === 1 ? "video" : "videos";
     
-                $.map(videos, function (key, value) {
+                $.map(videos, function (key, _value) {
                     let videoHTML =
                         '<a href="' +
                         key.link +
