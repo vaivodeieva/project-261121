@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-body {
+.workout-container {
   display: table;
   width: 100%;
   background-image: url("https://www.athletenetwork.com/userfiles/images/brad%20pitt%20workout.gif");

@@ -15,7 +15,7 @@ let workRunning;
         let start;
         let intervalId;
         let applauseAudio;
-        
+
 function Workout() {
     let workPhrases = {
         5: "The first step is to start",
@@ -215,7 +215,7 @@ function Workout() {
       });
       
     return (
-        <div>
+        <div className='workout-container'>
                 <div class="container-flex">
                     <h1 id="tittle">Welcome to GIFodoro</h1>
                     <h2 id="secondTittle" style={{display: 'none'}}></h2>
