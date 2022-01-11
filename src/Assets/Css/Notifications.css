@@ -1,0 +1,71 @@
+@charset "utf8";
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap);
+
+:root {
+  font-size: 24px;
+}
+
+/* *,
+*:before,
+*:after */
+
+.notifications-container{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notifications-container {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  background-image: url(//www.toptal.com/designers/subtlepatterns/patterns/symphony.png);
+  background-position: bottom;
+  animation: 4s linear 0s infinite bp;
+}
+
+@keyframes bp {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 198px;
+  }
+}
+
+#message {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+div[id^="elem"] {
+  width: 80%;
+  padding: 1rem;
+  margin-bottom: 0.1rem;
+  background-color: DarkBlue;
+  transition: all 0.5s ease-in-out; /* syncronize with SetTimeout = 500 */
+}
+
+div[id^="elem"]:hover {
+  background-color: white;
+  color: DarkBlue;
+  border: 2px solid DarkBlue;
+}
+
+div[id^="elem"] span {
+  float: right;
+}
+
+div[id^="elem"] span:hover {
+  cursor: pointer;
+}
