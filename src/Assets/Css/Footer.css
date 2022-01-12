@@ -160,4 +160,7 @@ ul {
     color: #878787;
   }
   
+  .footer-links:hover {
+    font-size: 22px;
+  }
   
