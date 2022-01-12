@@ -60,16 +60,16 @@ function Footer() {
                                         <h3>Useful Links</h3>
                                     </div>
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">about</a></li>
-                                        <li><a href="#">services</a></li>
-                                        <li><a href="#">portfolio</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Our Services</a></li>
-                                        <li><a href="#">Expert Team</a></li>
-                                        <li><a href="#">Contact us</a></li>
-                                        <li><a href="#">Latest News</a></li>
+                                        <li><a href="#" className='footer-links'>Home</a></li>
+                                        <li><a href="#"className='footer-links'>about</a></li>
+                                        <li><a href="#"className='footer-links'>services</a></li>
+                                        <li><a href="#"className='footer-links'>portfolio</a></li>
+                                        <li><a href="#"className='footer-links'>Contact</a></li>
+                                        <li><a href="#"className='footer-links'>About us</a></li>
+                                        <li><a href="#"className='footer-links'>Our Services</a></li>
+                                        <li><a href="#"className='footer-links'>Expert Team</a></li>
+                                        <li><a href="#"className='footer-links'>Contact us</a></li>
+                                        <li><a href="#"className='footer-links'>Latest News</a></li>
                                     </ul>
                                 </div>
                             </div>
