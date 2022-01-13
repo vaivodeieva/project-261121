@@ -7,6 +7,7 @@ import Workout from './Views/Workout';
 import Page404 from './Views/Page404';
 import Notifications from './Views/Notifications';
 import Settings from './Views/Settings';
+import Search from './Views/Search';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
             <Route path="/workout" element={<Workout />} />
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/settings" element={<Settings />} />
