@@ -25,11 +25,11 @@
 
 /* (X) DOES NOT MATTER */
 /* PAGE & BODY */
-* {
+/* * {
   font-family: arial, sans-serif;
   box-sizing: border-box;
-}
-body {
+} */
+.search-container {
   display: flex;
   justify-content: center;
   min-height: 100vh;

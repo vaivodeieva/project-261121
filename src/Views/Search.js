@@ -1,9 +1,30 @@
 import '../Assets/Css/Search.css';
 function Search() {
-
+    window.addEventListener("load", () => {
+        // (A) GET HTML ELEMENTS
+        var filter = document.getElementById("the-filter"), // search box
+          list = document.querySelectorAll("#the-list li"); // all list items
+      
+        // (B) ATTACH KEY UP LISTENER TO SEARCH BOX
+        filter.onkeyup = () => {
+          // (B1) GET CURRENT SEARCH TERM
+          let search = filter.value.toLowerCase();
+      
+          // (B2) LOOP THROUGH LIST ITEMS - ONLY SHOW THOSE THAT MATCH SEARCH
+          for (let i of list) {
+            let item = i.innerHTML.toLowerCase();
+            if (item.indexOf(search) == -1) {
+              i.classList.add("hide");
+            } else {
+              i.classList.remove("hide");
+            }
+          }
+        };
+      });
+      
     return (
-        <div>
-            <div class="widget-wrap">
+        <div className='search-container'>
+            <div className="widget-wrap">
                 <h1>SEARCHABLE LIST</h1>
 
                 <input type="text" id="the-filter" placeholder="Search For..." autocomplete="off" />
@@ -35,13 +56,6 @@ function Search() {
                     <li>Strawberries</li>
                     <li>Watermelon</li>
                 </ul>
-
-                <div id="code-boxx">
-                    Visit
-                    <a href="https://code-boxx.com/filter-search-list-in-javascript/" target="_blank">
-                        Code Boxx
-                    </a> for more details.
-                </div>
             </div>
         </div>
     )
