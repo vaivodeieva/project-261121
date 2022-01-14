@@ -1,60 +1,61 @@
+/* (A) SEARCH BOX */
+#the-filter {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+/* (B) LIST */
+#the-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#the-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+#the-list li:hover {
+  background: #fffed6;
+}
+#the-list li.hide {
+  display: none;
+}
+
+/* (X) DOES NOT MATTER */
+/* PAGE & BODY */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(0, 128, 128);
-    color: #eee;
-  } */
-  
- .search-nav {
-    height: 60px;
-    background-color: rgb(0, 46, 46);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  h1 {
-    margin: 2rem;
-    text-align: center;
-  }
-  
-  input {
-    width: 0;
-    border: none;
-    outline: none;
-  }
-  
-  .bi-search {
-    color: rgb(235, 235, 235);
-    font-size: 1.3rem;
-    padding: 10px 5px;
-  }
-  .bi-search:hover {
-    cursor: pointer;
-    color: rgb(201, 201, 199);
-  }
-  
-  input.active-search {
-    width: 80px;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    padding: 10px 5px;
-    transition: 0.3s width ease-in;
-    font-size: 16px;
-    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.3);
-  }
-  input.active-search:hover {
-    width: 120px;
-    transition: 0.3s width ease-in;
-  }
-  input.active-search:focus {
-    width: 300px;
-    transition: 0.6s width ease-in;
-  }
-  
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1559239115-ce3eb7cb87ea?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MTcwMDMyNA&ixlib=rb-1.2.1&q=85);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* WIDGET */
+.widget-wrap {
+  min-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* FOOTER */
+#code-boxx {
+  font-weight: 600;
+  margin-top: 50px;
+}
+#code-boxx a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  background: #b90a0a;
+  color: #fff;
+}
