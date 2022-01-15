@@ -1,426 +1,426 @@
 import '../Assets/Css/Settings.css';
 
-// let TestCode;
-// let doNeonAnim;
-// let doBreath;
-// let doGlowed;
-// let doBrightup;
-// let doFlipstripes;
-// let doStripes;
-// let doIcnAnim;
-// let doIcons;
-// let doBorderWidth;
-// let doBorder;
-// let doUpperCase;
-// let doEdges;
-// let doOversize;
-// let doWide;
-// let doButtonSize;
-// let doBackground;
-// let doColors;
-// let TestButton;
-// let bgView;
-// let doReflect;
-// let jClass;
-// let TestPalette;
-// let input;
-// let doFont;
+let TestCode;
+let doNeonAnim;
+let doBreath;
+let doGlowed;
+let doBrightup;
+let doFlipstripes;
+let doStripes;
+let doIcnAnim;
+let doIcons;
+let doBorderWidth;
+let doBorder;
+let doUpperCase;
+let doEdges;
+let doOversize;
+let doWide;
+let doButtonSize;
+let doBackground;
+let doColors;
+let TestButton;
+let bgView;
+let doReflect;
+let jClass;
+let TestPalette;
+let input;
+let doFont;
 
 function Settings() {
 
-  // jClass = "";
-  // doUpperCase = "";
-  // doReflect = "";
-  // doWide = "";
-  // doEdges = "";
-  // doBorder = "";
-  // doBreath = "";
-  // doBorderWidth = "";
-  // doButtonSize = "";
-  // doOversize = "";
-  // doStripes = "";
-  // doColors = "";
-  // doIcons = "";
-  // doIcnAnim = "";
-  // doBackground = "";
-  // doBrightup = "";
-  // doGlowed = "";
-  // doNeonAnim = "";
-  // doFont = "";
-  // doFlipstripes = "";
+  jClass = "";
+  doUpperCase = "";
+  doReflect = "";
+  doWide = "";
+  doEdges = "";
+  doBorder = "";
+  doBreath = "";
+  doBorderWidth = "";
+  doButtonSize = "";
+  doOversize = "";
+  doStripes = "";
+  doColors = "";
+  doIcons = "";
+  doIcnAnim = "";
+  doBackground = "";
+  doBrightup = "";
+  doGlowed = "";
+  doNeonAnim = "";
+  doFont = "";
+  doFlipstripes = "";
   
-  // var i;
+  var i;
   
-  // function HtmlEncode(s) {
-  //   var el = document.createElement("div");
-  //   el.innerText = el.textContent = s;
-  //   s = el.innerHTML;
-  //   return s;
-  // }
+  function HtmlEncode(s) {
+    var el = document.createElement("div");
+    el.innerText = el.textContent = s;
+    s = el.innerHTML;
+    return s;
+  }
   
-  // TestButton = document.getElementById("TestBtn");
-  // TestPalette = document.getElementById("palette");
-  // TestCode = document.getElementById("btn-code-html");
-  // TestCode.innerHTML = HtmlEncode(TestButton.outerHTML);
+  TestButton = document.getElementById("TestBtn");
+  TestPalette = document.getElementById("palette");
+  TestCode = document.getElementById("btn-code-html");
+  TestCode.innerHTML = HtmlEncode(TestButton.outerHTML);
   
-  // bgView = document.getElementsByClassName("bg-view");
+  bgView = document.getElementsByClassName("bg-view");
   
-  // for (input of document.querySelectorAll("input[type=range]")) {
-  //   updateInput(input);
-  // }
+  for (input of document.querySelectorAll("input[type=range]")) {
+    updateInput(input);
+  }
   
-  // document.addEventListener("input", function (slide) {
-  //   let input = slide.target;
-  //   updateInput(input);
-  // });
+  document.addEventListener("input", function (slide) {
+    let input = slide.target;
+    updateInput(input);
+  });
   
-  // function updateInput(input) {
-  //   let inputID = input.getAttribute("id");
-  //   let innerText = input.getAttribute("btn-text");
+  function updateInput(input) {
+    let inputID = input.getAttribute("id");
+    let innerText = input.getAttribute("btn-text");
   
-  //   function setInner(c, d) {
-  //     switch (jClass) {
-  //       case "action-button":
-  //         switch (c) {
-  //           case " img-bg-gaming":
-  //             c = "Play <b>some</b> amazing games";
-  //             break;
-  //           case " img-bg-shopping":
-  //             c = "Continue shopping <b>now</b>";
-  //             break;
-  //           case " img-bg-codepen":
-  //             c = "Follow me on <b>CodePen</b>";
-  //             break;
-  //           case " img-bg-settings":
-  //             c = "Change some <b>settings</b>";
-  //             break;
-  //           case " img-bg-funny":
-  //             c = "Do something <b>fun</b> today";
-  //             break;
+    function setInner(c, d) {
+      switch (jClass) {
+        case "action-button":
+          switch (c) {
+            case " img-bg-gaming":
+              c = "Play <b>some</b> amazing games";
+              break;
+            case " img-bg-shopping":
+              c = "Continue shopping <b>now</b>";
+              break;
+            case " img-bg-codepen":
+              c = "Follow me on <b>CodePen</b>";
+              break;
+            case " img-bg-settings":
+              c = "Change some <b>settings</b>";
+              break;
+            case " img-bg-funny":
+              c = "Do something <b>fun</b> today";
+              break;
   
-  //           default:
-  //             c = "Icon <b>and</b> Background";
-  //         }
-  //         break;
-  //       case "neon-button":
-  //         switch (c) {
-  //           case " neon-framed dual":
-  //             c = 'Dual <span className="neon-enhanced color-candy8"></span>';
-  //             break;
-  //           case " neon-framed":
-  //             c = 'Frame <span className="neon-enhanced"></span>';
-  //             break;
-  //           case " neon-fused":
-  //             c = 'Fuse <span className="neon-enhanced"></span>';
-  //             break;
+            default:
+              c = "Icon <b>and</b> Background";
+          }
+          break;
+        case "neon-button":
+          switch (c) {
+            case " neon-framed dual":
+              c = 'Dual <span className="neon-enhanced color-candy8"></span>';
+              break;
+            case " neon-framed":
+              c = 'Frame <span className="neon-enhanced"></span>';
+              break;
+            case " neon-fused":
+              c = 'Fuse <span className="neon-enhanced"></span>';
+              break;
   
-  //           case " neon-wrapped":
-  //             c = "Wrap";
-  //             break;
-  //           case " neon-orbiter":
-  //             c = "Orbit";
-  //             break;
-  //           default:
-  //             c = "add more";
-  //         }
-  //         break;
-  //       default:
-  //         c = d;
-  //     }
+            case " neon-wrapped":
+              c = "Wrap";
+              break;
+            case " neon-orbiter":
+              c = "Orbit";
+              break;
+            default:
+              c = "add more";
+          }
+          break;
+        default:
+          c = d;
+      }
   
-  //     return c;
-  //   }
+      return c;
+    }
   
-  //   switch (inputID) {
-  //     case "btn-descend":
-  //       TestButton.setAttribute("data-text", "Let go ...");
-  //       jClass = input.value;
-  //       TestButton.innerHTML = innerText;
-  //       break;
-  //     case "btn-elastic":
-  //     case "btn-gloss":
-  //     case "btn-frames":
-  //     case "btn-freehand":
-  //     case "btn-transparent":
-  //     case "btn-spread":
-  //     case "btn-fill":
-  //     case "btn-flip":
-  //     case "btn-follow":
-  //     case "btn-icon":
-  //     case "btn-bubble":
-  //     case "btn-flag":
-  //     case "btn-candy":
-  //     case "btn-none":
-  //     case "btn-themed":
-  //       jClass = input.value;
-  //       TestButton.innerHTML = setInner(doBackground, innerText);
-  //       TestButton.removeAttribute("data-text");
-  //       break;
-  //     case "btn-neon":
-  //       jClass = input.value;
-  //       TestButton.innerHTML = setInner(doNeonAnim, innerText);
-  //       TestButton.removeAttribute("data-text");
-  //       break;
+    switch (inputID) {
+      case "btn-descend":
+        TestButton.setAttribute("data-text", "Let go ...");
+        jClass = input.value;
+        TestButton.innerHTML = innerText;
+        break;
+      case "btn-elastic":
+      case "btn-gloss":
+      case "btn-frames":
+      case "btn-freehand":
+      case "btn-transparent":
+      case "btn-spread":
+      case "btn-fill":
+      case "btn-flip":
+      case "btn-follow":
+      case "btn-icon":
+      case "btn-bubble":
+      case "btn-flag":
+      case "btn-candy":
+      case "btn-none":
+      case "btn-themed":
+        jClass = input.value;
+        TestButton.innerHTML = setInner(doBackground, innerText);
+        TestButton.removeAttribute("data-text");
+        break;
+      case "btn-neon":
+        jClass = input.value;
+        TestButton.innerHTML = setInner(doNeonAnim, innerText);
+        TestButton.removeAttribute("data-text");
+        break;
   
-  //     case "uppercase":
-  //       if (input.checked == true) {
-  //         doUpperCase = input.value;
-  //       } else {
-  //         doUpperCase = "";
-  //       }
-  //       break;
-  //     case "reflect":
-  //       if (input.checked == true) {
-  //         doReflect = input.value;
-  //       } else {
-  //         doReflect = "";
-  //       }
-  //       break;
-  //     /*Reflection not visible in Firefox*/
-  //     case "wide":
-  //       if (input.checked == true) {
-  //         doWide = input.value;
-  //       } else {
-  //         doWide = "";
-  //       }
-  //       break;
-  //     case "breath":
-  //       if (input.checked == true) {
-  //         doBreath = input.value;
-  //       } else {
-  //         doBreath = "";
-  //       }
-  //       break;
-  //     case "oversize":
-  //       if (input.checked == true) {
-  //         doOversize = input.value;
-  //       } else {
-  //         doOversize = "";
-  //       }
-  //       break;
-  //     case "striped":
-  //       if (input.checked == true) {
-  //         doStripes = input.value;
-  //       } else {
-  //         doStripes = "";
-  //       }
-  //       break;
-  //     case "flip-stripes":
-  //       if (input.checked == true) {
-  //         doFlipstripes = input.value;
-  //       } else {
-  //         doFlipstripes = "";
-  //       }
-  //       break;
-  //     case "brightup":
-  //       if (input.checked == true) {
-  //         doBrightup = input.value;
-  //       } else {
-  //         doBrightup = "";
-  //       }
-  //       break;
-  //     case "glowed":
-  //       if (input.checked == true) {
-  //         doGlowed = input.value;
-  //       } else {
-  //         doGlowed = "";
-  //       }
-  //       break;
-  //     case "edge-none":
-  //     case "edge-smoothed":
-  //     case "edge-rounded":
-  //     case "edge-round":
-  //     case "edge-elliptic":
-  //       doEdges = input.value;
-  //       break;
-  //     case "border-default":
-  //     case "border-lined":
-  //     case "border-dotted":
-  //     case "border-dashed":
-  //       doBorder = input.value;
-  //       break;
-  //     case "border-def":
-  //     case "border-thin":
-  //     case "border-normal":
-  //     case "border-thick":
-  //       doBorderWidth = input.value;
-  //       break;
-  //     case "size-default":
-  //     case "size-small":
-  //     case "size-normal":
-  //     case "size-large":
-  //     case "size-xlarge":
-  //     case "size-xxlarge":
-  //       doButtonSize = input.value;
-  //       break;
+      case "uppercase":
+        if (input.checked == true) {
+          doUpperCase = input.value;
+        } else {
+          doUpperCase = "";
+        }
+        break;
+      case "reflect":
+        if (input.checked == true) {
+          doReflect = input.value;
+        } else {
+          doReflect = "";
+        }
+        break;
+      /*Reflection not visible in Firefox*/
+      case "wide":
+        if (input.checked == true) {
+          doWide = input.value;
+        } else {
+          doWide = "";
+        }
+        break;
+      case "breath":
+        if (input.checked == true) {
+          doBreath = input.value;
+        } else {
+          doBreath = "";
+        }
+        break;
+      case "oversize":
+        if (input.checked == true) {
+          doOversize = input.value;
+        } else {
+          doOversize = "";
+        }
+        break;
+      case "striped":
+        if (input.checked == true) {
+          doStripes = input.value;
+        } else {
+          doStripes = "";
+        }
+        break;
+      case "flip-stripes":
+        if (input.checked == true) {
+          doFlipstripes = input.value;
+        } else {
+          doFlipstripes = "";
+        }
+        break;
+      case "brightup":
+        if (input.checked == true) {
+          doBrightup = input.value;
+        } else {
+          doBrightup = "";
+        }
+        break;
+      case "glowed":
+        if (input.checked == true) {
+          doGlowed = input.value;
+        } else {
+          doGlowed = "";
+        }
+        break;
+      case "edge-none":
+      case "edge-smoothed":
+      case "edge-rounded":
+      case "edge-round":
+      case "edge-elliptic":
+        doEdges = input.value;
+        break;
+      case "border-default":
+      case "border-lined":
+      case "border-dotted":
+      case "border-dashed":
+        doBorder = input.value;
+        break;
+      case "border-def":
+      case "border-thin":
+      case "border-normal":
+      case "border-thick":
+        doBorderWidth = input.value;
+        break;
+      case "size-default":
+      case "size-small":
+      case "size-normal":
+      case "size-large":
+      case "size-xlarge":
+      case "size-xxlarge":
+        doButtonSize = input.value;
+        break;
   
-  //     case "img-default":
-  //       TestButton.removeAttribute("style");
-  //       break;
-  //     case "img-change":
-  //     case "img-controls":
-  //     case "img-fun":
-  //     case "img-party":
-  //     case "img-gaming":
-  //     case "img-shopping":
-  //       TestButton.setAttribute("style", input.value);
-  //       break;
+      case "img-default":
+        TestButton.removeAttribute("style");
+        break;
+      case "img-change":
+      case "img-controls":
+      case "img-fun":
+      case "img-party":
+      case "img-gaming":
+      case "img-shopping":
+        TestButton.setAttribute("style", input.value);
+        break;
   
-  //     case "bg-gradient-black":
-  //     case "bg-gradient-blue":
-  //     case "bg-gradient-gold":
-  //     case "bg-gradient-green":
-  //     case "bg-gradient-red":
-  //     case "bg-gradient-gray":
-  //     case "bg-gradient-brown":
-  //       doBackground = input.value;
-  //       break;
+      case "bg-gradient-black":
+      case "bg-gradient-blue":
+      case "bg-gradient-gold":
+      case "bg-gradient-green":
+      case "bg-gradient-red":
+      case "bg-gradient-gray":
+      case "bg-gradient-brown":
+        doBackground = input.value;
+        break;
   
-  //     case "bg-gaming":
-  //     case "bg-shopping":
-  //     case "bg-codepen":
-  //     case "bg-settings":
-  //     case "bg-funny":
-  //     case "bg-default":
-  //       doBackground = input.value;
-  //       TestButton.innerHTML = setInner(doBackground, TestButton.innerHTML);
-  //       break;
+      case "bg-gaming":
+      case "bg-shopping":
+      case "bg-codepen":
+      case "bg-settings":
+      case "bg-funny":
+      case "bg-default":
+        doBackground = input.value;
+        TestButton.innerHTML = setInner(doBackground, TestButton.innerHTML);
+        break;
   
-  //     case "icon-none":
-  //     case "icon-gaming":
-  //     case "icon-wheel":
-  //     case "icon-glass":
-  //     case "icon-cloud":
-  //     case "icon-power":
-  //     case "icon-lock":
-  //     case "icon-clip":
-  //     case "icon-link":
-  //     case "icon-download":
-  //     case "icon-upload":
-  //     case "icon-paypal":
-  //     case "icon-codepen":
-  //     case "icon-cart":
-  //     case "icon-cart-add":
-  //     case "icon-print":
-  //     case "icon-arrow-right":
-  //     case "icon-archive":
-  //     case "icon-folder":
-  //     case "icon-sun":
-  //     case "icon-diamond":
-  //       doIcons = input.value;
-  //       break;
+      case "icon-none":
+      case "icon-gaming":
+      case "icon-wheel":
+      case "icon-glass":
+      case "icon-cloud":
+      case "icon-power":
+      case "icon-lock":
+      case "icon-clip":
+      case "icon-link":
+      case "icon-download":
+      case "icon-upload":
+      case "icon-paypal":
+      case "icon-codepen":
+      case "icon-cart":
+      case "icon-cart-add":
+      case "icon-print":
+      case "icon-arrow-right":
+      case "icon-archive":
+      case "icon-folder":
+      case "icon-sun":
+      case "icon-diamond":
+        doIcons = input.value;
+        break;
   
-  //     case "icn-none":
-  //     case "icn--shake":
-  //     case "icn--rubber":
-  //     case "icn--rotate":
-  //     case "icn--flip":
-  //     case "icn--turn":
-  //     case "icn--zoom":
-  //       doIcnAnim = input.value;
-  //       break;
+      case "icn-none":
+      case "icn--shake":
+      case "icn--rubber":
+      case "icn--rotate":
+      case "icn--flip":
+      case "icn--turn":
+      case "icn--zoom":
+        doIcnAnim = input.value;
+        break;
   
-  //     case "font-default":
-  //     case "font-open-sans":
-  //     case "font-consolas":
-  //     case "font-oswald":
-  //     case "font-patrick":
-  //     case "font-bangers":
-  //     case "font-quicksand":
-  //     case "font-calligraffitti":
-  //       doFont = input.value;
-  //       break;
+      case "font-default":
+      case "font-open-sans":
+      case "font-consolas":
+      case "font-oswald":
+      case "font-patrick":
+      case "font-bangers":
+      case "font-quicksand":
+      case "font-calligraffitti":
+        doFont = input.value;
+        break;
   
-  //     case "neon-dual":
-  //     case "neon-framed":
-  //     case "neon-fused":
-  //     case "neon-wrapped":
-  //     case "neon-orbiter":
-  //     case "neon-none":
-  //       doNeonAnim = input.value;
-  //       TestButton.innerHTML = setInner(doNeonAnim, TestButton.innerHTML);
-  //       break;
+      case "neon-dual":
+      case "neon-framed":
+      case "neon-fused":
+      case "neon-wrapped":
+      case "neon-orbiter":
+      case "neon-none":
+        doNeonAnim = input.value;
+        TestButton.innerHTML = setInner(doNeonAnim, TestButton.innerHTML);
+        break;
   
-  //     case "color-default":
-  //     case "color-gray":
-  //     case "color-freehand":
-  //     case "color-striped":
-  //     case "color-blank":
-  //     case "color--black":
-  //     case "color-funny-yellow":
-  //     case "color--red":
-  //     case "color--blue":
-  //     case "color--tomato":
-  //     case "color--orangered":
-  //     case "color--amber":
-  //     case "color--yellow":
-  //     case "color--green":
-  //     case "color--yellowgreen":
-  //     case "color--teal":
-  //     case "color--teal2":
-  //     case "color--cyan":
-  //     case "color--royalslate":
-  //     case "color--mediumpurple":
-  //     case "color--rebeccapurple":
-  //     case "color-neon-red":
-  //     case "color-neon-blue":
-  //     case "color-neon-yellow":
-  //     case "color-neon-green":
-  //     case "color-candy1":
-  //     case "color-candy2":
-  //     case "color-candy3":
-  //     case "color-candy4":
-  //     case "color-candy5":
-  //     case "color-candy6":
-  //     case "color-candy7":
-  //     case "color-candy8":
-  //     case "color-candy9":
-  //     case "color-gaming":
-  //     case "color-shopping":
-  //     case "color-codepen":
-  //     case "color-settings":
-  //     case "color-funny":
-  //       doColors = input.value;
-  //       for (i = 0; i < bgView.length; i++) {
-  //         bgView[i].className = "bg-view" + doColors;
-  //       }
-  //       break;
+      case "color-default":
+      case "color-gray":
+      case "color-freehand":
+      case "color-striped":
+      case "color-blank":
+      case "color--black":
+      case "color-funny-yellow":
+      case "color--red":
+      case "color--blue":
+      case "color--tomato":
+      case "color--orangered":
+      case "color--amber":
+      case "color--yellow":
+      case "color--green":
+      case "color--yellowgreen":
+      case "color--teal":
+      case "color--teal2":
+      case "color--cyan":
+      case "color--royalslate":
+      case "color--mediumpurple":
+      case "color--rebeccapurple":
+      case "color-neon-red":
+      case "color-neon-blue":
+      case "color-neon-yellow":
+      case "color-neon-green":
+      case "color-candy1":
+      case "color-candy2":
+      case "color-candy3":
+      case "color-candy4":
+      case "color-candy5":
+      case "color-candy6":
+      case "color-candy7":
+      case "color-candy8":
+      case "color-candy9":
+      case "color-gaming":
+      case "color-shopping":
+      case "color-codepen":
+      case "color-settings":
+      case "color-funny":
+        doColors = input.value;
+        for (i = 0; i < bgView.length; i++) {
+          bgView[i].className = "bg-view" + doColors;
+        }
+        break;
   
-  //     default:
-  //     // code block
-  //   }
-  //   TestButton.className =
-  //     jClass +
-  //     doColors +
-  //     doBackground +
-  //     doButtonSize +
-  //     doWide +
-  //     doOversize +
-  //     doEdges +
-  //     doUpperCase +
-  //     doBorder +
-  //     doBorderWidth +
-  //     doIcons +
-  //     doIcnAnim +
-  //     doStripes +
-  //     doFlipstripes +
-  //     doBrightup +
-  //     doGlowed +
-  //     doBreath +
-  //     doNeonAnim +
-  //     doFont +
-  //     doReflect;
-  //   TestPalette.className = doColors;
+      default:
+      // code block
+    }
+    TestButton.className =
+      jClass +
+      doColors +
+      doBackground +
+      doButtonSize +
+      doWide +
+      doOversize +
+      doEdges +
+      doUpperCase +
+      doBorder +
+      doBorderWidth +
+      doIcons +
+      doIcnAnim +
+      doStripes +
+      doFlipstripes +
+      doBrightup +
+      doGlowed +
+      doBreath +
+      doNeonAnim +
+      doFont +
+      doReflect;
+    TestPalette.className = doColors;
   
-  //   TestCode.innerHTML = HtmlEncode(TestButton.outerHTML);
-  // }
+    TestCode.innerHTML = HtmlEncode(TestButton.outerHTML);
+  }
   
   
-  // const form = document.getElementById("TestButton");
-  // form.addEventListener("submit", (event) => {
-  //   // submit event detected
-  //   event.preventDefault();
-  // });
+  const form = document.getElementById("TestButton");
+  form.addEventListener("submit", (event) => {
+    // submit event detected
+    event.preventDefault();
+  });
   
   return (
     <div>
