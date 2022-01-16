@@ -61,7 +61,7 @@ function Settings() {
   TestButton = document.getElementById("TestBtn");
   TestPalette = document.getElementById("palette");
   TestCode = document.getElementById("btn-code-html");
-  TestCode.innerHTML = HtmlEncode(TestButton.outerHTML);
+  TestCode.innerHTML = HtmlEncode(TestButton.innerHTML);
   
   bgView = document.getElementsByClassName("bg-view");
   
@@ -412,7 +412,7 @@ function Settings() {
       doReflect;
     TestPalette.className = doColors;
   
-    TestCode.innerHTML = HtmlEncode(TestButton.outerHTML);
+    TestCode.innerHTML = HtmlEncode(TestButton.innerHTML);
   }
   
   
