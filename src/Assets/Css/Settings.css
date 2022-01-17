@@ -41,7 +41,7 @@
 }
 
 @media (min-width:768px) {
-    body {
+    .settings-container {
         --font-scale: 1;
     }
 }
