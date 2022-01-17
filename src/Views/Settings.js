@@ -424,7 +424,7 @@ function Settings() {
     });
   }
   return (
-    <div>
+    <div className='settings-container'>
       <div className="fixed-wrapper">
 
         <div className="switch-wrapper">
