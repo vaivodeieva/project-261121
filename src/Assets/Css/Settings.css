@@ -16,7 +16,7 @@
 .font-quicksand {--button-font: "Quicksand", sans-serif;}
 .font-calligraffitti {--button-font: Calligraffitti, times new roman, serif;}
 
-body {
+.settings-container {
     display: block;
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@ body {
 }
 
 @media (min-width:560px) {
-    body {
+    .settings-container {
         --font-scale: 0.875;
     }
 }
