@@ -1,5 +1,6 @@
 import '../Assets/Css/Settings.css';
 
+
 let TestCode;
 let doNeonAnim;
 let doBreath;
@@ -28,6 +29,7 @@ let doFont;
 
 function Settings() {
 
+  window.onload = () => {
   jClass = "";
   doUpperCase = "";
   doReflect = "";
@@ -415,13 +417,12 @@ function Settings() {
     TestCode.innerHTML = HtmlEncode(TestButton.innerHTML);
   }
   
-  
   const form = document.getElementById("TestButton");
   form.addEventListener("submit", (event) => {
     // submit event detected
     event.preventDefault();
   });
-  
+}
   return (
     <div>
       <div className="fixed-wrapper">
