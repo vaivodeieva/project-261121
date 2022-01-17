@@ -33,7 +33,7 @@ body {
   line-height: 40px;
 }
 .tbox,
-.btn {
+.btn-home {
   border: none;
   outline: none;
 }
@@ -47,7 +47,7 @@ body {
   padding: 0 10px;
 }
 
-.btn {
+.btn-home {
   background: green;
   color: whitesmoke;
   padding: 0 10px;
