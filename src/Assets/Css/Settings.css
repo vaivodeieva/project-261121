@@ -17,8 +17,8 @@
 .font-calligraffitti {--button-font: Calligraffitti, times new roman, serif;}
 
 .settings-container {
-    display: block;
-    position: absolute;
+    /* display: block; */
+    /* position: absolute; */
     top: 0;
     left: 0;
     right: 0;
