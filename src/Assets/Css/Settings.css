@@ -220,8 +220,8 @@ button:active {
 
 .fixed-wrapper {
     z-index: 99;
-    /* position: fixed;
-    display: inline-block; */
+    position:sticky;
+    display:block;
     box-sizing: border-box;
     left: 0;
     right: 0;
