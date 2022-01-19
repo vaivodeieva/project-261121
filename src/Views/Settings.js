@@ -425,7 +425,7 @@ function Settings() {
   }
   return (
     <div className='settings-container'>
-      <div className="fixed-wrapper">
+      <div className="sticky-wrapper">
 
         <div className="switch-wrapper">
           <input type="checkbox" className="darkmode inversed" />
