@@ -1,5 +1,6 @@
 import '../Assets/Css/Notifications.css';
 function Notifications() {
+  window.onload = () => {
     document.body.addEventListener("mousedown", function (el) {
         const e = el.target;
         if (e.nodeName === "SPAN") {
@@ -15,7 +16,7 @@ function Notifications() {
           }, 500);
         }
       });
-      
+    }
     return (
         <div className='notifications-container'>
             <p id="message">Close the accomplished exercise!</p>
