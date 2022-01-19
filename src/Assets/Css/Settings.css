@@ -218,7 +218,7 @@ button:active {
     height: 19em;
 }
 
-.fixed-wrapper {
+.sticky-wrapper {
     z-index: 99;
     position:sticky;
     display:block;
