@@ -17,6 +17,7 @@ let workRunning;
         let applauseAudio;
 
 function Workout() {
+  window.onload = () => { 
     let workPhrases = {
         5: "The first step is to start",
         4: "Starting is the first step",
@@ -213,6 +214,7 @@ function Workout() {
           }
         });
       });
+    }
       
     return (
         <div className='workout-container'>
