@@ -22,27 +22,27 @@ body {
   font-size: 40px;
   font-weight: 600;
 }
-.email-box {
+.email-box-home {
   height: 45px;
   display: flex;
   justify-content: center;
 }
-.email-box i {
+.email-box-home i {
   background: #252525;
   width: 65px;
   line-height: 40px;
 }
-.tbox,
+.tbox-home,
 .btn-home {
   border: none;
   outline: none;
 }
-.tbox {
+.tbox-home {
   width: 0px;
   transition: 0.6s;
 }
-.email-box:hover > .tbox,
-.tbox:focus {
+.email-box-home:hover > .tbox-home,
+.tbox-home:focus {
   width: 560px;
   padding: 0 10px;
 }
