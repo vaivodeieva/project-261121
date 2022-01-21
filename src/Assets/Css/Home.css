@@ -16,7 +16,7 @@ body {
   font-size: 50px;
   opacity: 0.7;
 }
-.container p {
+.container-inner p {
   max-width: 600px;
   margin: 25px auto;
   font-size: 40px;
