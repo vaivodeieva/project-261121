@@ -40,6 +40,8 @@ body {
 .tbox-home {
   width: 0px;
   transition: 0.6s;
+  font-size: 30px!important;
+  color: #252525;
 }
 .email-box-home:hover > .tbox-home,
 .tbox-home:focus {
