@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.email-box-home i {
+.email-box-home span {
   background: #252525;
   width: 65px;
   line-height: 40px;
