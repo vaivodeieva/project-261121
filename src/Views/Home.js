@@ -11,7 +11,7 @@ function Home() {
                         <div className="email-box-home">
                             <span className="fas fa-envelope"></span>
                             <input className="tbox-home" type="email" name="" placeholder="Enter your email"/>
-                            <button className="btn-home" type="button" name="button">Subscribe</button>
+                            <button className="btn-home" type="button" name="button-home">Subscribe</button>
                         </div>
                     </form>
                 </div>
