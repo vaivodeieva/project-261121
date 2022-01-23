@@ -1,4 +1,5 @@
 import '../Assets/Css/Search.css';
+
 function Search() {
     window.addEventListener("load", () => {
         // (A) GET HTML ELEMENTS
