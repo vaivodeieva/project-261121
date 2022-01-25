@@ -218,30 +218,30 @@ function Workout() {
       
     return (
         <div className='workout-container'>
-                <div class="container-flex">
+                <div className="container-flex">
                     <h1 id="tittle">Welcome to GIFodoro</h1>
                     <h2 id="secondTittle" style={{display: 'none'}}></h2>
 
                     <div id="timeSet">
-                        <div class="inputs">
+                        <div className="inputs">
                             <label for="break">Break time</label>
                             <input id="break" type="text" value="5"/>
                         </div>
-                        <div class="inputs">
+                        <div className="inputs">
                             <label for="Work">Work time</label>
                             <input id="work" type="text" value="25"/>
                         </div>
-                        <div class="inputs">
+                        <div className="inputs">
                             <label for="sessions">Sessions</label>
                             <input id="sessions" type="text" value="2"/>
                         </div>
 
-                        <button class="btn" id="start"><span class="button-text">Lets Do It</span></button>
+                        <button className="btn" id="start"><span className="button-text">Lets Do It</span></button>
                     </div>
                     <div id="counterButtons">
-                        <button class="btn" id="setTime">Set time</button>
-                        <button class="btn" id="pause">Pause timer</button>
-                        <button class="btn" id="startAgain">Start timer</button>
+                        <button className="btn" id="setTime">Set time</button>
+                        <button className="btn" id="pause">Pause timer</button>
+                        <button className="btn" id="startAgain">Start timer</button>
                     </div>
                 </div>
 
