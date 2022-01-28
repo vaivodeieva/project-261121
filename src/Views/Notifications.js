@@ -11,7 +11,7 @@ function Notifications() {
               "Accomplished exercise " + e.parentNode.id + " removed !";
             if (document.getElementsByTagName("div").length <= 0) {
               document.getElementById("message").innerHTML =
-                "Nothing more to click ;(";
+                "Congratulations! You accomplished all exercises! :)";
             }
           }, 500);
         }
