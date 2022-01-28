@@ -8,7 +8,7 @@ function Notifications() {
           setTimeout(function () {
             document.getElementById(e.parentNode.id).remove();
             document.getElementById("message").innerHTML =
-              "DIV " + e.parentNode.id + " removed !";
+              "Accomplished exercise " + e.parentNode.id + " removed !";
             if (document.getElementsByTagName("div").length <= 0) {
               document.getElementById("message").innerHTML =
                 "Nothing more to click ;(";
