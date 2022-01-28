@@ -1,5 +1,6 @@
 import '../Assets/Css/Footer.css';
 function Footer() {
+    let date = new Date();
     return (
         <div>
             <footer className="footer-section">
@@ -97,7 +98,7 @@ function Footer() {
                         <div className="row">
                             <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                                 <div className="copyright-text">
-                                    <p>Copyright &copy; 2022 All Rights Reserved</p>
+                                    <p>Copyright &copy; {date.getFullYear()} All Rights Reserved</p>
                                 </div>
                             </div>
                             <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
