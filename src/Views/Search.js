@@ -25,8 +25,8 @@ function Search() {
       
     return (
         <div className='search-container'>
-            <div className="widget-wrap">
-                <h1>SEARCHABLE LIST</h1>
+            <div className="widget-wrap col-lg-6 md-4">
+                <h2 className='col-sm-2'>SEARCHABLE LIST</h2>
 
                 <input type="text" id="the-filter" placeholder="Search For..." autocomplete="off" />
 
