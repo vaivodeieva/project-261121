@@ -142,11 +142,6 @@ function Workout() {
         }
       }
       
-      function startPause() {
-        workRunning = false;
-        breakRunning = false;
-        $("#pause").text("Start timer");
-      }
       
       $(document).ready(function () {
         $("#start").on({
