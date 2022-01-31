@@ -53,6 +53,7 @@ body {
 
 .inputs {
   display: inline-block;
+  font-size: smaller;
 }
 
 #timeSet,
