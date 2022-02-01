@@ -1,9 +1,11 @@
 import '../Assets/Css/Home.css';
+// import home from '../Assets/Images/home.webp';
 
 function Home() {
 
     return (
         <div className='home-container'>
+            {/* <img src={home} className='img-fluid' style={{opacity: '0.9', minHeight: '100%'}}/> */}
                 <div className="container-inner">
                     <form action="">
                         <h1>Boost your Performance</h1>

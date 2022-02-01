@@ -4,9 +4,9 @@
   font-family: "montserrat", sans-serif;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
     /* url("https://pbs.twimg.com/media/DWH8pTQW4AAdp4F.jpg") no-repeat center; */
-    url("../Images/home.webp");
+    url("../Images/home.webp") no-repeat center;
   background-size: cover;
-  height: 150vh;
+  min-height: 150vh;
 }
 .container-inner {
   padding: 150px 40px;
