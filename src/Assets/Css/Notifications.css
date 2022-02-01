@@ -48,7 +48,7 @@ div[id^="elem"] {
   width: 80%;
   padding: 1rem;
   margin-bottom: 0.1rem;
-  background-color: DarkBlue;
+  background-color: rgb(245, 12, 132);
   transition: all 0.5s ease-in-out; 
 }
 
