@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 730px;
+  height: 720px;
 }
 
 #counterButtons,
@@ -25,8 +25,9 @@ body {
   padding: 10px;
   text-align: center;
   vertical-align: middle;
-  background-color: rgba(50, 10, 10, 0.5);
+  background-color: rgba(50, 10, 10, 0.3);
   font-family: "Open Sans", sans-serif;
+
   color: #fff;
 }
 
