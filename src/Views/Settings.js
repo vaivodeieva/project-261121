@@ -1,6 +1,4 @@
 import '../Assets/Css/Settings.css';
-
-
 let TestCode;
 let doNeonAnim;
 let doBreath;
@@ -26,9 +24,7 @@ let jClass;
 let TestPalette;
 let input;
 let doFont;
-
 function Settings() {
-
   window.onload = () => {
     jClass = "";
     doUpperCase = "";
@@ -50,36 +46,28 @@ function Settings() {
     doNeonAnim = "";
     doFont = "";
     doFlipstripes = "";
-
     var i;
-
     function HtmlEncode(s) {
       var el = document.createElement("div");
       el.innerText = el.textContent = s;
       s = el.innerHTML;
       return s;
     }
-
     TestButton = document.getElementById("TestBtn");
     TestPalette = document.getElementById("palette");
     TestCode = document.getElementById("btn-code-html");
     TestCode.innerHTML = HtmlEncode(TestButton.innerHTML);
-
     bgView = document.getElementsByClassName("bg-view");
-
     for (input of document.querySelectorAll("input[type=range]")) {
       updateInput(input);
     }
-
     document.addEventListener("input", function (slide) {
       let input = slide.target;
       updateInput(input);
     });
-
     function updateInput(input) {
       let inputID = input.getAttribute("id");
       let innerText = input.getAttribute("btn-text");
-
       function setInner(c, d) {
         switch (jClass) {
           case "action-button":
@@ -99,7 +87,6 @@ function Settings() {
               case " img-bg-funny":
                 c = "Do something <b>fun</b> today";
                 break;
-
               default:
                 c = "Icon <b>and</b> Background";
             }
@@ -115,7 +102,6 @@ function Settings() {
               case " neon-fused":
                 c = 'Fuse <span className="neon-enhanced"></span>';
                 break;
-
               case " neon-wrapped":
                 c = "Wrap";
                 break;
@@ -129,10 +115,8 @@ function Settings() {
           default:
             c = d;
         }
-
         return c;
       }
-
       switch (inputID) {
         case "btn-descend":
           TestButton.setAttribute("data-text", "Let go ...");
@@ -163,7 +147,6 @@ function Settings() {
           TestButton.innerHTML = setInner(doNeonAnim, innerText);
           TestButton.removeAttribute("data-text");
           break;
-
         case "uppercase":
           if (input.checked == true) {
             doUpperCase = input.value;
@@ -178,7 +161,6 @@ function Settings() {
             doReflect = "";
           }
           break;
-        /*Reflection not visible in Firefox*/
         case "wide":
           if (input.checked == true) {
             doWide = input.value;
@@ -255,7 +237,6 @@ function Settings() {
         case "size-xxlarge":
           doButtonSize = input.value;
           break;
-
         case "img-default":
           TestButton.removeAttribute("style");
           break;
@@ -267,7 +248,6 @@ function Settings() {
         case "img-shopping":
           TestButton.setAttribute("style", input.value);
           break;
-
         case "bg-gradient-black":
         case "bg-gradient-blue":
         case "bg-gradient-gold":
@@ -277,7 +257,6 @@ function Settings() {
         case "bg-gradient-brown":
           doBackground = input.value;
           break;
-
         case "bg-gaming":
         case "bg-shopping":
         case "bg-codepen":
@@ -287,7 +266,6 @@ function Settings() {
           doBackground = input.value;
           TestButton.innerHTML = setInner(doBackground, TestButton.innerHTML);
           break;
-
         case "icon-none":
         case "icon-gaming":
         case "icon-wheel":
@@ -311,7 +289,6 @@ function Settings() {
         case "icon-diamond":
           doIcons = input.value;
           break;
-
         case "icn-none":
         case "icn--shake":
         case "icn--rubber":
@@ -321,7 +298,6 @@ function Settings() {
         case "icn--zoom":
           doIcnAnim = input.value;
           break;
-
         case "font-default":
         case "font-open-sans":
         case "font-consolas":
@@ -332,7 +308,6 @@ function Settings() {
         case "font-calligraffitti":
           doFont = input.value;
           break;
-
         case "neon-dual":
         case "neon-framed":
         case "neon-fused":
@@ -342,7 +317,6 @@ function Settings() {
           doNeonAnim = input.value;
           TestButton.innerHTML = setInner(doNeonAnim, TestButton.innerHTML);
           break;
-
         case "color-default":
         case "color-gray":
         case "color-freehand":
@@ -387,9 +361,7 @@ function Settings() {
             bgView[i].className = "bg-view" + doColors;
           }
           break;
-
         default:
-        // code block
       }
       TestButton.className =
         jClass +
@@ -413,20 +385,16 @@ function Settings() {
         doFont +
         doReflect;
       TestPalette.className = doColors;
-
       TestCode.innerHTML = HtmlEncode(TestButton.innerHTML);
     }
-
     const form = document.getElementById("TestButton");
     form.addEventListener("submit", (event) => {
-      // submit event detected
       event.preventDefault();
     });
   }
   return (
     <div className='settings-container'>
       <div className="sticky-wrapper">
-
         <div className="switch-wrapper">
           <input type="checkbox" className="darkmode inversed" />
           <form className="Demo-Panel Neon-Panel" id="TestButton" onsubmit="callLink">
@@ -437,7 +405,6 @@ function Settings() {
             <p id="reflection">Reflection not visible in Firefox</p>
           </form>
         </div>
-
         <div className="doc">
           <ul className="" id="palette">
             <li className="textcolor"><span></span>textcolor</li>
@@ -457,11 +424,8 @@ function Settings() {
           </p>
         </div>
       </div>
-
       <div className="blocker">
-
       </div>
-
       <div className="control-box">
         <div className="control-column-1">
           <div className="control-wrapper">
@@ -513,7 +477,6 @@ function Settings() {
               <label for="btn-neon">.neon-button<span className="cref">Neon button with animated border and reflection<e>by <a href="https://codepen.io/dschoni/pen/eYGrPNM" target="_blank">myself</a></e></span></label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Edges</h2>
             <form>
@@ -529,7 +492,6 @@ function Settings() {
               <label for="edge-elliptic">elliptic</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Font</h2>
             <form>
@@ -551,7 +513,6 @@ function Settings() {
               <label className="font-view" for="font-calligraffitti">Calligraffitti</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Options</h2>
             <form>
@@ -570,7 +531,6 @@ function Settings() {
               <input type="checkbox" id="glowed" name="glowed" value=" glowed" />
               <label for="glowed"> Neon glow<span className="cref">Neon buttons <e>by <a href="https://codepen.io/andrewspin/pen/ZEGbJOo" target="_blank">AndrewSpin</a>
               </e></span></label><br />
-
               <input type="checkbox" id="reflect" name="reflect" value=" reflection" />
               <label for="reflect"> Reflection</label><br />
               <hr />
@@ -581,7 +541,6 @@ function Settings() {
             </form>
           </div>
         </div>
-
         <div className="control-wrapper">
           <h2>Colors</h2>
           <form>
@@ -670,9 +629,7 @@ function Settings() {
             <label className="Colors color-funny" for="color-funny">Funny theme</label><br />
           </form>
         </div>
-
         <div className="control-column-3">
-
           <div className="control-wrapper">
             <h2>Size</h2>
             <form>
@@ -690,7 +647,6 @@ function Settings() {
               <label for="size-xxlarge">xxlarge</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Borderstyle</h2>
             <form>
@@ -704,7 +660,6 @@ function Settings() {
               <label for="border-dashed">dashed</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Borderwidth</h2>
             <form>
@@ -718,7 +673,6 @@ function Settings() {
               <label for="border-thick">thick</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Backgrounds</h2>
             <form>
@@ -753,7 +707,6 @@ function Settings() {
               <label className="bg-view" for="bg-funny">Fun<span className="img-bg-funny"></span></label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Pictures</h2>
             <form>
@@ -773,11 +726,8 @@ function Settings() {
               <label className="img-view" for="img-shopping">Shopping</label><br />
             </form>
           </div>
-
         </div>
-
         <div className="control-column-4">
-
           <div className="control-wrapper">
             <h2>Icons</h2>
             <form>
@@ -827,7 +777,6 @@ function Settings() {
               <label className="icn-view icon-sun" for="icon-sun">sun</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Icon Action</h2>
             <form>
@@ -847,7 +796,6 @@ function Settings() {
               <label className="icn-anim icon-arrow-right icn--zoom" for="icn--zoom">zoom</label><br />
             </form>
           </div>
-
           <div className="control-wrapper">
             <h2>Neon Action</h2>
             <form>
@@ -865,12 +813,9 @@ function Settings() {
               <label for="neon-dual">Dual Color</label><br />
             </form>
           </div>
-
         </div>
       </div>
-
     </div>
   )
 }
-
 export default Settings;
