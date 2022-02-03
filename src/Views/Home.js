@@ -1,7 +1,5 @@
 import '../Assets/Css/Home.css';
-
 function Home() {
-
     return (
         <div className='home-container'>
                 <div className="container-inner">
@@ -15,7 +13,6 @@ function Home() {
                         </div>
                     </form>
                 </div>
-            
         </div>
     )
 }
