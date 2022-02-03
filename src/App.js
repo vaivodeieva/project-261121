@@ -8,8 +8,6 @@ import Page404 from './Views/Page404';
 import Notifications from './Views/Notifications';
 import Settings from './Views/Settings';
 import Search from './Views/Search';
-
-
 function App() {
   return (
     <div>
@@ -28,5 +26,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
