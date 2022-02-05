@@ -4,7 +4,6 @@
     box-sizing: border-box;
     background: var(--red);
 }
-
 :root {
     --white:    #FFFFFF;
     --red:      rgb(245, 12, 132);
@@ -12,8 +11,6 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: calc( 14px + (25 - 14) * ((100vw - 400px) / ( 1200 - 400)));
 }
-
-
 .page-wrapper {
     position: relative;
     height: 90vh;
@@ -23,19 +20,16 @@
     background: var(--red);
     box-shadow: 0 2rem 3rem var(--dark-red);
 }
-
 @-webkit-keyframes circle-animation {
     0%   { transform: translateX(-50%) translateY(-50%) scale(0); }
     10%  { transform: translateX(-50%) translateY(-50%) scale(1); }
     100% { transform: translateX(-50%) translateY(-50%) scale(1); }
 }
-
 @keyframes circle-animation {
     0%   { transform: translateX(-50%) translateY(-50%) scale(0); }
     10%  { transform: translateX(-50%) translateY(-50%) scale(1); }
     100% { transform: translateX(-50%) translateY(-50%) scale(1); }
 }
-
 .circles-layer {
     position: absolute;
     top: 0;
@@ -43,7 +37,6 @@
     height: 100%;
     width: 100%;
 }
-
 .circles-layer > .circle {
         position: absolute;
         top: 50%;
@@ -56,30 +49,24 @@
                 animation: circle-animation 10s linear infinite;
         will-change: transform;
     }
-
 .circles-layer > .circle.-white {
             border: 30vw solid var(--white);
         }
-
 .circles-layer > .circle.-red {
             border: 25vw solid var(--dark-red);
         }
-
 .circles-layer > .circle:nth-of-type(2) {
             -webkit-animation-delay: 100ms;
                     animation-delay: 100ms;
         }
-
 .circles-layer > .circle:nth-of-type(3) {
             -webkit-animation-delay: 150ms;
                     animation-delay: 150ms;
         }
-
 .circles-layer > .circle:nth-of-type(4) {
             -webkit-animation-delay: 200ms;
                     animation-delay: 200ms;
         }
-
 @-webkit-keyframes number-animation {
     0%   { transform: scale(0);   opacity: 0; }
     30%  { transform: scale(0);   opacity: 0; }
@@ -99,7 +86,6 @@
     80%  { transform: scale(0);   opacity: 0; }
     100% { transform: scale(0);   opacity: 0; }
 }
-
 @keyframes number-animation {
     0%   { transform: scale(0);   opacity: 0; }
     30%  { transform: scale(0);   opacity: 0; }
@@ -119,7 +105,6 @@
     80%  { transform: scale(0);   opacity: 0; }
     100% { transform: scale(0);   opacity: 0; }
 }
-
 .numbers-layer {
     position: absolute;
     top: -1rem;
@@ -127,7 +112,6 @@
     height: 100%;
     width: 100%;
 }
-
 .numbers-layer > .number {
         position: absolute;
         font-size: 10rem;
@@ -139,39 +123,25 @@
                 animation: number-animation 10s linear infinite;
         will-change: transform, opacity;
     }
-
 .numbers-layer > .number.-with-shadow {
             text-shadow: 1rem 1rem var(--dark-red);
         }
-
 .numbers-layer > .number:nth-of-type(1)  { top: 5%;  left: 5%;  -webkit-animation-delay:  0;  animation-delay:  0;    }
-
 .numbers-layer > .number:nth-of-type(2)  { top: 15%; left: 55%; -webkit-animation-delay: 40ms; animation-delay: 40ms; 
         font-size: 15rem; }
-
 .numbers-layer > .number:nth-of-type(3)  { top: 25%; left: 15%; -webkit-animation-delay: 80ms; animation-delay: 80ms; }
-
 .numbers-layer > .number:nth-of-type(4)  { top: 75%; left: 20%; -webkit-animation-delay: 120ms; animation-delay: 120ms; }
-
 .numbers-layer > .number:nth-of-type(5)  { top: 25%; left: 75%; -webkit-animation-delay: 160ms; animation-delay: 160ms; 
         font-size: 6rem; }
-
 .numbers-layer > .number:nth-of-type(6)  { top: 65%; left: 45%; -webkit-animation-delay: 200ms; animation-delay: 200ms; }
-
 .numbers-layer > .number:nth-of-type(7)  { top: 45%; left: 85%; -webkit-animation-delay: 240ms; animation-delay: 240ms; }
-
 .numbers-layer > .number:nth-of-type(8)  { top: 10%; left: 85%; -webkit-animation-delay: 280ms; animation-delay: 280ms; }
-
 .numbers-layer > .number:nth-of-type(9)  { top: 40%; left: 35%; -webkit-animation-delay: 320ms; animation-delay: 320ms; 
         font-size: 15rem; }
-
 .numbers-layer > .number:nth-of-type(10) { top: 70%; left: 65%; -webkit-animation-delay: 360ms; animation-delay: 360ms; }
-
 .numbers-layer > .number:nth-of-type(11) { top: 10%; left: 30%; -webkit-animation-delay: 400ms; animation-delay: 400ms; 
         font-size: 6rem; }
-
 .numbers-layer > .number:nth-of-type(12) { top: 45%; left: 10%; -webkit-animation-delay: 440ms; animation-delay: 440ms; }
-
 .oops-message {
     position: absolute;
     width: 20rem;
@@ -182,7 +152,6 @@
     text-align: center;
     color: var(--white);
 }
-
 .oops-message > .button {
         display: inline-block;
         margin-top: .5rem;
@@ -194,13 +163,11 @@
         border-radius: 1rem;
         transition: all 120ms ease-in;
     }
-
 .oops-message > .button:hover,
         .oops-message > .button:focus {
             background: var(--dark-red);
             color: var(--white);
         }
-
         .page-wrapper {
             margin-bottom: 50px;
             border-radius: 20px;
