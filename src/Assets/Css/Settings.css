@@ -7,7 +7,6 @@
 @import url(https://fonts.googleapis.com/css?family=Calligraffitti);
 @import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Dosis:300,400,600,700,800|Droid+Sans:400,700|Lato:300,400,700,900|PT+Sans:400,700|Ubuntu:300,400,500,700|Open+Sans:400,300,600,700|Roboto:400,300,500,700,900|Roboto+Condensed:400,300,700|Open+Sans+Condensed:300,700|Play:400,700|Maven+Pro:400,500,700,900&subset=latin,latin-ext);
-
 .font-open-sans {--button-font: 'Open Sans', sans-serif;}
 .font-consolas {--button-font: consolas;}
 .font-oswald {--button-font: 'Oswald', sans-serif;}
@@ -15,67 +14,27 @@
 .font-bangers {--button-font: 'Bangers', cursive;}
 .font-quicksand {--button-font: "Quicksand", sans-serif;}
 .font-calligraffitti {--button-font: Calligraffitti, times new roman, serif;}
-
 .settings-container {
-    /* display: block; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0;
-    right: 0; */
     background-color: white;
     font-family: sans-serif;
-    /* padding: 1em; */
     --font-scale: 0.75;
-
     font-size: calc(var(--font-scale, 0.75) * 1rem);
 }
-
 .preload {
     transition: none;
 }
-
 @media (min-width:560px) {
     .settings-container {
         --font-scale: 0.875;
     }
 }
-
 @media (min-width:768px) {
     .settings-container {
         --font-scale: 1;
     }
 }
-
-/* h1 {
-    color: #333;
-    font-size: 1.5em;
-    font-weight: bold;
-} */
-
-/* h2 {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: -1rem;
-    transform: translate(-50%, -50%);
-    border: 1px solid;
-    border-radius: 0.5em;
-    padding: 0.2em 1em;
-    color: #303030;
-    font-family: 'Oswald', sans-serif;
-    font-weight: normal;
-    font-size: calc(var(--font-scale) * 1rem);
-    text-align: center;
-    background-color: #e0e0e0;
-    overflow: hidden;
-}
-
 p {margin: 0.625em 0;} */
-
 #reflection {display: none;}
-
-/* ----------------------------------------------------------------- */
-
 .btn {
     display: inline-block;
     box-sizing: border-box;
@@ -85,72 +44,55 @@ p {margin: 0.625em 0;} */
     letter-spacing: normal;
     word-spacing: normal;
 }
-
 .btn,
 button {
     position: relative;
-    /* margin: 0.75em; */
     border: var(--btn-border-width, 0.125em) var(--btn-border-style, solid) var(--btn-bordercolor, black);
     border-radius: var(--btn-border-radius, 0);
     padding: 0.75em 1.5em;
-
     font-family: var(--button-font, inherit);
     font-size: calc(var(--font-scale) * 1rem);
     color: var(--btn-textcolor, black);
     text-shadow: 0 0 0.5em var(--btn-textshadow, none);
     text-decoration: none;
-
     overflow: visible;
-
     cursor: pointer;
     outline: none;
-
     background-image: var(--btn-background-image, linear-gradient(var(--btn-facecolor, transparent), var(--btn-facecolor, transparent)));
     background-size: cover;
     transition: none;
 }
-
 .btn[style],
 button[style] {
     font-weight: 700;
     text-shadow: 0 0 0.75em var(--btn-bottomcolor, rgba(0, 0, 0, 0.2));
 }
-
 .btn:active,
 button:active {
     transition: none;
     transform: translatey(2px);
 }
-
-/* ----------------------------------------------------------------- */
-
 .btn--small {font-size: 0.75em;}
 .btn--normal {font-size: 1em;}
 .btn--large {font-size: 1.25em;}
 .btn--xlarge {font-size: 1.5em;}
 .btn--xxlarge {font-size: 2em;}
 .btn--wide {width: 50%;}
-
 .lined {--btn-border-style: solid;}
 .dashed {--btn-border-style: dashed;}
 .dotted {--btn-border-style: dotted;}
-
 .thin {--btn-border-width: 0.084em;}
 .normal {--btn-border-width: 0.125em;}
 .thick {--btn-border-width: 0.209em;}
-
 .smoothed {--btn-border-radius: 0.32em;}
 .rounded {--btn-border-radius: 0.625em;}
 .round {--btn-border-radius: 50vh;}
 .elliptic {--btn-border-radius: 50%;}
-
 .uppercase {text-transform: uppercase;}
-
 .reflection {
     margin-bottom: 3em;
     -webkit-box-reflect: below 0.63em linear-gradient(transparent, #0005);
 }
-
 @-moz-document url-prefix() {
     .reflection + #reflection {
         display: block !important;
@@ -163,14 +105,10 @@ button:active {
         color: gray;
     }
 }
-
-/* ----------------------------------------------------------------- */
-
 .control-box {
     text-align: justify;
     text-align-last: justify;
 }
-
 .control-column-4,
 .control-column-3,
 .control-column-1 {
@@ -193,7 +131,6 @@ button:active {
         width: 15em;
     }
 }
-
 .control-wrapper {
     position: relative;
     display: inline-block;
@@ -210,14 +147,12 @@ button:active {
     overflow: visible;
     vertical-align: top;
 }
-
 .blocker {
     position: relative;
     display: block;
     box-sizing: border-box;
     height: 19em;
 }
-
 .sticky-wrapper {
     z-index: 99;
     position:sticky;
@@ -234,7 +169,6 @@ button:active {
     background: #dcdcdcdc;
     overflow: visible;
 }
-
 .switch-wrapper {
     float: left;
     position: relative;
@@ -246,7 +180,6 @@ button:active {
     background: none;
     overflow: visible;
 }
-
 .doc {
     position: relative;
     display: inline-block;
@@ -256,11 +189,9 @@ button:active {
     min-width: 10.5em;
     width: calc(100%  - 37.5em);
 }
-
 #btn-code-html {
     word-wrap: break-word;
 }
-
 #description {
     box-sizing: border-box;
     position: absolute;
@@ -276,7 +207,6 @@ button:active {
     overflow: auto;
     background: #ededed;
 }
-
 @media (max-width:999px) {
     #description {
         display: none;
@@ -287,23 +217,17 @@ button:active {
         display: none;
     }
 }
-
-
 label {
     position: relative;
 }
-
 .cref {
     z-index: 1;
     visibility: hidden;
     position: absolute;
     display: block;
     box-sizing: border-box;
-    /*margin-left: -60px;*/
-    /*left: 50%;*/
     left: calc(100% - 2em);
     bottom: 100%;
-    /*width: 120px;*/
     width: max-content;
     border-radius: 6px;
     padding: 0.3em;
@@ -314,7 +238,6 @@ label {
     transition: opacity 0.3s;
     box-shadow: 5px 5px 5px gray, -2px -2px 5px gray;
   }
-  
   .cref::after {
     content: "";
     position: absolute;
@@ -325,14 +248,10 @@ label {
     border-style: solid;
     border-color: #ccc transparent transparent transparent;
   }
-  
   label:hover .cref {
     visibility: visible;
     opacity: 1;
   }
-
-
-
 #palette {
     float: left;
     overflow: hidden;
@@ -342,14 +261,11 @@ label {
     margin-right: 0.5em;
     background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.2), rgba(0,0,0,0.2) 3%, rgba(255,255,255,0.2) 6%);
 }
-
-
 #palette>li {
     text-decoration: none;
     padding: 0;
     margin: 0;
 }
-
 #palette>li>span {
     content: "";
     display: inline-block;
@@ -358,7 +274,6 @@ label {
     margin-right: 0.5em;
     border: 1px solid black;
 }
-
 .textcolor span { background-color: var(--btn-textcolor);}
 .highlight-color span { background-color: var(--btn-highlight-color);}
 .textshadow span { background-color: var(--btn-textshadow);}
@@ -370,9 +285,6 @@ label {
 .shadowcolor-hover span { background-color: var(--btn-shadowcolor-hover);}
 .bottomcolor span { background-color: var(--btn-bottomcolor);}
 .switch-color span { background-color: var(--btn-switch-color);}
-
-/* ----------------------------------------------------------------- */
-
 .Demo-Panel {
     text-align: center;
     display: inline-block;
@@ -387,45 +299,32 @@ label {
     transition: background 200ms ease;
     --switch-color: black;
 }
-
 .Neon-Panel {
     background: black;
     --switch-color: #fcfcfc;
 }
-
-/* ----------------------------------------------------------------- */
-
-/* Animations */
-
 @keyframes shake {
-
     from,
     to {
         transform: translate3d(0, 0, 0);
     }
-
     10%,
     70% {
         transform: translate3d(-0.32em, 0, 0);
     }
-
     40% {
         transform: translate3d(0.32em, 0, 0);
     }
 }
-
 .icn--shake {
     --icon-animation: shake 1s;
     --icon-action-large: scale(1);
 }
-
 @keyframes rubber {
-
     from,
     to {
         transform: scale3d(1, 1, 1);
     }
-
     30% {
         transform: scale3d(1.25, .75, 1);
     }
